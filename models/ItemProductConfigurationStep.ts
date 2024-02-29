@@ -10,38 +10,52 @@
  * Do not edit the class manually.
  */
 
-import { OrderFulfillmentItem } from '../models/OrderFulfillmentItem';
+import { ProductConfigurationStepOption } from '../models/ProductConfigurationStepOption';
 import { HttpFile } from '../http/http';
 
-export class OrderCreateFulfillmentRequest {
-    'tenantId': string;
-    'orderId': string;
-    'items': Array<OrderFulfillmentItem>;
+export class ItemProductConfigurationStep {
+    'id'?: string;
+    'grn'?: string;
+    'label'?: string;
+    'description'?: string;
+    'options'?: Array<ProductConfigurationStepOption>;
 
     static readonly discriminator: string | undefined = undefined;
 
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
-            "name": "tenantId",
-            "baseName": "tenantId",
+            "name": "id",
+            "baseName": "id",
             "type": "string",
             "format": ""
         },
         {
-            "name": "orderId",
-            "baseName": "orderId",
+            "name": "grn",
+            "baseName": "grn",
             "type": "string",
             "format": ""
         },
         {
-            "name": "items",
-            "baseName": "items",
-            "type": "Array<OrderFulfillmentItem>",
+            "name": "label",
+            "baseName": "label",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "description",
+            "baseName": "description",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "options",
+            "baseName": "options",
+            "type": "Array<ProductConfigurationStepOption>",
             "format": ""
         }    ];
 
     static getAttributeTypeMap() {
-        return OrderCreateFulfillmentRequest.attributeTypeMap;
+        return ItemProductConfigurationStep.attributeTypeMap;
     }
 
     public constructor() {

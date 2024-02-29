@@ -13,8 +13,8 @@
 import { HttpFile } from '../http/http';
 
 export class OrderReportFulfillmentErrorRequest {
-    'tenantId'?: string;
-    'fulfillmentId'?: string;
+    'tenantId': string;
+    'fulfillmentId': string;
 
     static readonly discriminator: string | undefined = undefined;
 

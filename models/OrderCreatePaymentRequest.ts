@@ -15,11 +15,11 @@ import { PaymentCcInfo } from '../models/PaymentCcInfo';
 import { HttpFile } from '../http/http';
 
 export class OrderCreatePaymentRequest {
-    'tenantId'?: string;
-    'orderId'?: string;
-    'code'?: string;
+    'tenantId': string;
+    'orderId': string;
+    'code': string;
     'additionalInfo'?: string;
-    'amount'?: OrderMoney;
+    'amount': OrderMoney;
     'ccInfo'?: PaymentCcInfo;
 
     static readonly discriminator: string | undefined = undefined;

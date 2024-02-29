@@ -14,10 +14,10 @@ import { UpdateOrderRequestPayload } from '../models/UpdateOrderRequestPayload';
 import { HttpFile } from '../http/http';
 
 export class OrderUpdateOrderRequest {
-    'tenantId'?: string;
-    'id'?: string;
+    'tenantId': string;
+    'id': string;
     'payload'?: UpdateOrderRequestPayload;
-    'fieldMask'?: Array<string>;
+    'fieldMask'?: string;
 
     static readonly discriminator: string | undefined = undefined;
 
@@ -43,7 +43,7 @@ export class OrderUpdateOrderRequest {
         {
             "name": "fieldMask",
             "baseName": "fieldMask",
-            "type": "Array<string>",
+            "type": "string",
             "format": ""
         }    ];
 

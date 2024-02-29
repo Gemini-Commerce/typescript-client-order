@@ -12,15 +12,18 @@
 
 import { OrderPostalAddress } from '../models/OrderPostalAddress';
 import { OrderShipmentItem } from '../models/OrderShipmentItem';
+import { ShipmentTracking } from '../models/ShipmentTracking';
 import { HttpFile } from '../http/http';
 
 export class OrderCreateShipmentRequest {
-    'tenantId'?: string;
-    'orderId'?: string;
-    'items'?: Array<OrderShipmentItem>;
-    'address'?: OrderPostalAddress;
+    'tenantId': string;
+    'orderId': string;
+    'items': Array<OrderShipmentItem>;
+    'address': OrderPostalAddress;
     'fromAddress'?: OrderPostalAddress;
     'returnAddress'?: OrderPostalAddress;
+    'tracking'?: Array<ShipmentTracking>;
+    'returnTracking'?: Array<ShipmentTracking>;
     'code'?: string;
     'method'?: string;
 
@@ -61,6 +64,18 @@ export class OrderCreateShipmentRequest {
             "name": "returnAddress",
             "baseName": "returnAddress",
             "type": "OrderPostalAddress",
+            "format": ""
+        },
+        {
+            "name": "tracking",
+            "baseName": "tracking",
+            "type": "Array<ShipmentTracking>",
+            "format": ""
+        },
+        {
+            "name": "returnTracking",
+            "baseName": "returnTracking",
+            "type": "Array<ShipmentTracking>",
             "format": ""
         },
         {

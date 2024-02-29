@@ -22,23 +22,23 @@ import { OrderPostalAddress } from '../models/OrderPostalAddress';
 import { HttpFile } from '../http/http';
 
 export class OrderImportOrderRequest {
-    'tenantId'?: string;
+    'tenantId': string;
     'createdAt'?: Date;
-    'number'?: string;
+    'number': string;
     'channel'?: string;
-    'market'?: string;
-    'locale'?: string;
-    'customerInfo'?: OrderDataCustomerInfo;
-    'shippingAddress'?: OrderPostalAddress;
-    'billingAddress'?: OrderPostalAddress;
-    'payments'?: Array<ImportOrderRequestImportedPayment>;
-    'paymentsInfo'?: Array<OrderDataPaymentInfo>;
-    'shipmentsInfo'?: Array<OrderDataShipmentInfo>;
-    'items'?: Array<OrderOrderDataItem>;
-    'subtotals'?: { [key: string]: OrderDataSubtotal; };
-    'totals'?: { [key: string]: OrderDataTotal; };
-    'status'?: string;
-    'currency'?: OrderCurrency;
+    'market': string;
+    'locale': string;
+    'customerInfo': OrderDataCustomerInfo;
+    'shippingAddress': OrderPostalAddress;
+    'billingAddress': OrderPostalAddress;
+    'payments': Array<ImportOrderRequestImportedPayment>;
+    'paymentsInfo': Array<OrderDataPaymentInfo>;
+    'shipmentsInfo': Array<OrderDataShipmentInfo>;
+    'items': Array<OrderOrderDataItem>;
+    'subtotals': { [key: string]: OrderDataSubtotal; };
+    'totals': { [key: string]: OrderDataTotal; };
+    'status': string;
+    'currency': OrderCurrency;
 
     static readonly discriminator: string | undefined = undefined;
 
