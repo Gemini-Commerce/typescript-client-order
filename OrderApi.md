@@ -3405,6 +3405,8 @@ let body:.OrderApiSearchOrdersRequest = {
       condition: "IN",
     },
     agentGrn: "agentGrn_example",
+    updatedFrom: new Date('1970-01-01T00:00:00.00Z'),
+    updatedTo: new Date('1970-01-01T00:00:00.00Z'),
   },
 };
 
