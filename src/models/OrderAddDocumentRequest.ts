@@ -15,25 +15,43 @@
 /**
  * 
  * @export
- * @interface OrderCancelOrderRequest
+ * @interface OrderAddDocumentRequest
  */
-export interface OrderCancelOrderRequest {
+export interface OrderAddDocumentRequest {
     /**
      * 
      * @type {string}
-     * @memberof OrderCancelOrderRequest
+     * @memberof OrderAddDocumentRequest
      */
     'tenantId': string;
     /**
      * 
      * @type {string}
-     * @memberof OrderCancelOrderRequest
+     * @memberof OrderAddDocumentRequest
      */
     'orderId': string;
     /**
      * 
      * @type {string}
-     * @memberof OrderCancelOrderRequest
+     * @memberof OrderAddDocumentRequest
      */
-    'reason'?: string;
+    'code': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof OrderAddDocumentRequest
+     */
+    'label'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof OrderAddDocumentRequest
+     */
+    'assetGrn'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof OrderAddDocumentRequest
+     */
+    'url'?: string;
 }

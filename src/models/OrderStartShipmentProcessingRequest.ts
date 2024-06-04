@@ -23,11 +23,11 @@ export interface OrderStartShipmentProcessingRequest {
      * @type {string}
      * @memberof OrderStartShipmentProcessingRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderStartShipmentProcessingRequest
      */
-    'shipmentId'?: string;
+    'shipmentId': string;
 }

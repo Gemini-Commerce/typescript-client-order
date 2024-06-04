@@ -23,17 +23,17 @@ export interface OrderCreateFulfillmentRequest {
      * @type {string}
      * @memberof OrderCreateFulfillmentRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderCreateFulfillmentRequest
      */
-    'orderId'?: string;
+    'orderId': string;
     /**
      * 
      * @type {Array<OrderFulfillmentItem>}
      * @memberof OrderCreateFulfillmentRequest
      */
-    'items'?: Array<OrderFulfillmentItem>;
+    'items': Array<OrderFulfillmentItem>;
 }

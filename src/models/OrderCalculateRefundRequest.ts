@@ -23,13 +23,13 @@ export interface OrderCalculateRefundRequest {
      * @type {string}
      * @memberof OrderCalculateRefundRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderCalculateRefundRequest
      */
-    'paymentId'?: string;
+    'paymentId': string;
     /**
      * 
      * @type {Array<OrderRefundItem>}

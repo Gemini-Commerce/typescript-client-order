@@ -23,13 +23,13 @@ export interface OrderQuashFulfillmentRequest {
      * @type {string}
      * @memberof OrderQuashFulfillmentRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderQuashFulfillmentRequest
      */
-    'fulfillmentId'?: string;
+    'fulfillmentId': string;
     /**
      * 
      * @type {string}

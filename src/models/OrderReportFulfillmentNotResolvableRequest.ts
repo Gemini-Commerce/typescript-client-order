@@ -23,11 +23,11 @@ export interface OrderReportFulfillmentNotResolvableRequest {
      * @type {string}
      * @memberof OrderReportFulfillmentNotResolvableRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderReportFulfillmentNotResolvableRequest
      */
-    'fulfillmentId'?: string;
+    'fulfillmentId': string;
 }

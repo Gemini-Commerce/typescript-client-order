@@ -23,7 +23,7 @@ export interface OrderListFulfillmentsRequest {
      * @type {string}
      * @memberof OrderListFulfillmentsRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}

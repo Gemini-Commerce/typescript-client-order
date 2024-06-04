@@ -14,7 +14,7 @@
 
 
 /**
- * 
+ * Stands for Albania, not all ;-)
  * @export
  */
 export const OrderCurrency = {

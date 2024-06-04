@@ -23,19 +23,19 @@ export interface OrderCreatePaymentRequest {
      * @type {string}
      * @memberof OrderCreatePaymentRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderCreatePaymentRequest
      */
-    'orderId'?: string;
+    'orderId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderCreatePaymentRequest
      */
-    'code'?: string;
+    'code': string;
     /**
      * 
      * @type {string}
@@ -47,7 +47,7 @@ export interface OrderCreatePaymentRequest {
      * @type {OrderMoney}
      * @memberof OrderCreatePaymentRequest
      */
-    'amount'?: OrderMoney;
+    'amount': OrderMoney;
     /**
      * 
      * @type {PaymentCcInfo}

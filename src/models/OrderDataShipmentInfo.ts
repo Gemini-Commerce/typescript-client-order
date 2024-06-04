@@ -23,13 +23,13 @@ export interface OrderDataShipmentInfo {
      * @type {string}
      * @memberof OrderDataShipmentInfo
      */
-    'reference'?: string;
+    'reference': string;
     /**
      * 
      * @type {string}
      * @memberof OrderDataShipmentInfo
      */
-    'code'?: string;
+    'code': string;
     /**
      * 
      * @type {string}
@@ -53,7 +53,7 @@ export interface OrderDataShipmentInfo {
      * @type {OrderMoney}
      * @memberof OrderDataShipmentInfo
      */
-    'amount'?: OrderMoney;
+    'amount': OrderMoney;
     /**
      * 
      * @type {OrderMoney}

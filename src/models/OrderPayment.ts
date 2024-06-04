@@ -31,7 +31,7 @@ export interface OrderPayment {
      */
     'id'?: string;
     /**
-     * 
+     * payment type stripe, paypal..
      * @type {string}
      * @memberof OrderPayment
      */

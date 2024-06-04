@@ -23,13 +23,13 @@ export interface OrderUpdatePaymentRequest {
      * @type {string}
      * @memberof OrderUpdatePaymentRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderUpdatePaymentRequest
      */
-    'paymentId'?: string;
+    'paymentId': string;
     /**
      * 
      * @type {PaymentCcInfo}

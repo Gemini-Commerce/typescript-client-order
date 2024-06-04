@@ -23,13 +23,13 @@ export interface OrderReportShipmentMissingStockRequest {
      * @type {string}
      * @memberof OrderReportShipmentMissingStockRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderReportShipmentMissingStockRequest
      */
-    'shipmentId'?: string;
+    'shipmentId': string;
     /**
      * 
      * @type {string}

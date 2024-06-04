@@ -23,11 +23,11 @@ export interface OrderReportShipmentDeliveryRequest {
      * @type {string}
      * @memberof OrderReportShipmentDeliveryRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderReportShipmentDeliveryRequest
      */
-    'shipmentId'?: string;
+    'shipmentId': string;
 }

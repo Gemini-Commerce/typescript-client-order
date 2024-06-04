@@ -8,6 +8,9 @@ src/index.ts
 src/models/CreateOrderRequestInitialPayment.ts
 src/models/ImportOrderRequestImportedPayment.ts
 src/models/InitialPaymentInitialTransaction.ts
+src/models/ItemProductConfigurationStep.ts
+src/models/OptionImage.ts
+src/models/OrderAddDocumentRequest.ts
 src/models/OrderApproveOrderRequest.ts
 src/models/OrderAssignShipmentRequest.ts
 src/models/OrderByDirection.ts
@@ -27,6 +30,7 @@ src/models/OrderCreateRefundTransactionRequest.ts
 src/models/OrderCreateShipmentRequest.ts
 src/models/OrderCurrency.ts
 src/models/OrderDataCustomerInfo.ts
+src/models/OrderDataDocument.ts
 src/models/OrderDataHistory.ts
 src/models/OrderDataPaymentInfo.ts
 src/models/OrderDataPromotionInfo.ts
@@ -77,6 +81,7 @@ src/models/OrderRefund.ts
 src/models/OrderRefundAmount.ts
 src/models/OrderRefundAmountCode.ts
 src/models/OrderRefundItem.ts
+src/models/OrderRemoveDocumentByCodeRequest.ts
 src/models/OrderReportFulfillmentErrorRequest.ts
 src/models/OrderReportFulfillmentNotResolvableRequest.ts
 src/models/OrderReportFulfillmentReadyRequest.ts
@@ -101,6 +106,7 @@ src/models/OrderUpdateOrderRequest.ts
 src/models/OrderUpdatePaymentRequest.ts
 src/models/PaymentCcInfo.ts
 src/models/PrintOrdersLabelsResponseFailedOrder.ts
+src/models/ProductConfigurationStepOption.ts
 src/models/ProtobufAny.ts
 src/models/ProtobufNullValue.ts
 src/models/RpcStatus.ts

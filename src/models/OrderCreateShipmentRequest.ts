@@ -23,25 +23,25 @@ export interface OrderCreateShipmentRequest {
      * @type {string}
      * @memberof OrderCreateShipmentRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderCreateShipmentRequest
      */
-    'orderId'?: string;
+    'orderId': string;
     /**
      * 
      * @type {Array<OrderShipmentItem>}
      * @memberof OrderCreateShipmentRequest
      */
-    'items'?: Array<OrderShipmentItem>;
+    'items': Array<OrderShipmentItem>;
     /**
      * 
      * @type {OrderPostalAddress}
      * @memberof OrderCreateShipmentRequest
      */
-    'address'?: OrderPostalAddress;
+    'address': OrderPostalAddress;
     /**
      * 
      * @type {OrderPostalAddress}
@@ -54,6 +54,18 @@ export interface OrderCreateShipmentRequest {
      * @memberof OrderCreateShipmentRequest
      */
     'returnAddress'?: OrderPostalAddress;
+    /**
+     * 
+     * @type {Array<ShipmentTracking>}
+     * @memberof OrderCreateShipmentRequest
+     */
+    'tracking'?: Array<ShipmentTracking>;
+    /**
+     * 
+     * @type {Array<ShipmentTracking>}
+     * @memberof OrderCreateShipmentRequest
+     */
+    'returnTracking'?: Array<ShipmentTracking>;
     /**
      * 
      * @type {string}

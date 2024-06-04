@@ -23,7 +23,7 @@ export interface InitialPaymentInitialTransaction {
      * @type {OrderTransactionType}
      * @memberof InitialPaymentInitialTransaction
      */
-    'type'?: OrderTransactionType;
+    'type': OrderTransactionType;
     /**
      * 
      * @type {string}

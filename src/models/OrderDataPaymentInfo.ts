@@ -23,7 +23,7 @@ export interface OrderDataPaymentInfo {
      * @type {string}
      * @memberof OrderDataPaymentInfo
      */
-    'code'?: string;
+    'code': string;
     /**
      * 
      * @type {string}
@@ -35,7 +35,7 @@ export interface OrderDataPaymentInfo {
      * @type {OrderMoney}
      * @memberof OrderDataPaymentInfo
      */
-    'amount'?: OrderMoney;
+    'amount': OrderMoney;
     /**
      * 
      * @type {OrderMoney}

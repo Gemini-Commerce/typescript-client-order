@@ -23,11 +23,11 @@ export interface OrderGetPaymentRequest {
      * @type {string}
      * @memberof OrderGetPaymentRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderGetPaymentRequest
      */
-    'id'?: string;
+    'id': string;
 }

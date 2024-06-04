@@ -29,7 +29,7 @@ export interface OrderHoldOrderRequest {
      * @type {string}
      * @memberof OrderHoldOrderRequest
      */
-    'orderId'?: string;
+    'orderId': string;
     /**
      * 
      * @type {string}

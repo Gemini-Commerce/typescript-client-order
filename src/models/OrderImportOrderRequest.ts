@@ -23,7 +23,7 @@ export interface OrderImportOrderRequest {
      * @type {string}
      * @memberof OrderImportOrderRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {Date}
@@ -35,7 +35,7 @@ export interface OrderImportOrderRequest {
      * @type {string}
      * @memberof OrderImportOrderRequest
      */
-    'number'?: string;
+    'number': string;
     /**
      * 
      * @type {string}
@@ -47,77 +47,77 @@ export interface OrderImportOrderRequest {
      * @type {string}
      * @memberof OrderImportOrderRequest
      */
-    'market'?: string;
+    'market': string;
     /**
      * 
      * @type {string}
      * @memberof OrderImportOrderRequest
      */
-    'locale'?: string;
+    'locale': string;
     /**
      * 
      * @type {OrderDataCustomerInfo}
      * @memberof OrderImportOrderRequest
      */
-    'customerInfo'?: OrderDataCustomerInfo;
+    'customerInfo': OrderDataCustomerInfo;
     /**
      * 
      * @type {OrderPostalAddress}
      * @memberof OrderImportOrderRequest
      */
-    'shippingAddress'?: OrderPostalAddress;
+    'shippingAddress': OrderPostalAddress;
     /**
      * 
      * @type {OrderPostalAddress}
      * @memberof OrderImportOrderRequest
      */
-    'billingAddress'?: OrderPostalAddress;
+    'billingAddress': OrderPostalAddress;
     /**
      * 
      * @type {Array<ImportOrderRequestImportedPayment>}
      * @memberof OrderImportOrderRequest
      */
-    'payments'?: Array<ImportOrderRequestImportedPayment>;
+    'payments': Array<ImportOrderRequestImportedPayment>;
     /**
      * 
      * @type {Array<OrderDataPaymentInfo>}
      * @memberof OrderImportOrderRequest
      */
-    'paymentsInfo'?: Array<OrderDataPaymentInfo>;
+    'paymentsInfo': Array<OrderDataPaymentInfo>;
     /**
      * 
      * @type {Array<OrderDataShipmentInfo>}
      * @memberof OrderImportOrderRequest
      */
-    'shipmentsInfo'?: Array<OrderDataShipmentInfo>;
+    'shipmentsInfo': Array<OrderDataShipmentInfo>;
     /**
      * 
      * @type {Array<OrderOrderDataItem>}
      * @memberof OrderImportOrderRequest
      */
-    'items'?: Array<OrderOrderDataItem>;
+    'items': Array<OrderOrderDataItem>;
     /**
      * 
      * @type {{ [key: string]: OrderDataSubtotal; }}
      * @memberof OrderImportOrderRequest
      */
-    'subtotals'?: { [key: string]: OrderDataSubtotal; };
+    'subtotals': { [key: string]: OrderDataSubtotal; };
     /**
      * 
      * @type {{ [key: string]: OrderDataTotal; }}
      * @memberof OrderImportOrderRequest
      */
-    'totals'?: { [key: string]: OrderDataTotal; };
+    'totals': { [key: string]: OrderDataTotal; };
     /**
      * 
      * @type {string}
      * @memberof OrderImportOrderRequest
      */
-    'status'?: string;
+    'status': string;
     /**
      * 
      * @type {OrderCurrency}
      * @memberof OrderImportOrderRequest
      */
-    'currency'?: OrderCurrency;
+    'currency': OrderCurrency;
 }

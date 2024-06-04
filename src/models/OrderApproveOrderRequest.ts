@@ -23,11 +23,11 @@ export interface OrderApproveOrderRequest {
      * @type {string}
      * @memberof OrderApproveOrderRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderApproveOrderRequest
      */
-    'orderId'?: string;
+    'orderId': string;
 }

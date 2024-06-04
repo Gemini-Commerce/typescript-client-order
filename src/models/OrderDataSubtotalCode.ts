@@ -14,7 +14,9 @@
 
 
 /**
- * 
+ *  - ITEMS: gross discount items amount.
+ *  - ITEMS_DISCOUNTED: discounted items amount.
+ *  - DISCOUNT: discount amount. It is a NEGATIVE amount.
  * @export
  */
 export const OrderDataSubtotalCode = {

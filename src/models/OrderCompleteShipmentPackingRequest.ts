@@ -23,11 +23,11 @@ export interface OrderCompleteShipmentPackingRequest {
      * @type {string}
      * @memberof OrderCompleteShipmentPackingRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderCompleteShipmentPackingRequest
      */
-    'shipmentId'?: string;
+    'shipmentId': string;
 }

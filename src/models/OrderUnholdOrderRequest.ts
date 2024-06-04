@@ -23,11 +23,11 @@ export interface OrderUnholdOrderRequest {
      * @type {string}
      * @memberof OrderUnholdOrderRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderUnholdOrderRequest
      */
-    'orderId'?: string;
+    'orderId': string;
 }

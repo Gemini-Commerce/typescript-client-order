@@ -15,6 +15,7 @@
 
 import * as runtime from '../runtime';
 import type {
+  OrderAddDocumentRequest,
   OrderApproveOrderRequest,
   OrderAssignShipmentRequest,
   OrderCalculateRefundRequest,
@@ -61,6 +62,7 @@ import type {
   OrderQuashShipmentRequest,
   OrderReceiveFulfillmentRequest,
   OrderRefund,
+  OrderRemoveDocumentByCodeRequest,
   OrderReportFulfillmentErrorRequest,
   OrderReportFulfillmentNotResolvableRequest,
   OrderReportFulfillmentReadyRequest,
@@ -82,6 +84,8 @@ import type {
   RpcStatus,
 } from '../models/index';
 import {
+    OrderAddDocumentRequestFromJSON,
+    OrderAddDocumentRequestToJSON,
     OrderApproveOrderRequestFromJSON,
     OrderApproveOrderRequestToJSON,
     OrderAssignShipmentRequestFromJSON,
@@ -174,6 +178,8 @@ import {
     OrderReceiveFulfillmentRequestToJSON,
     OrderRefundFromJSON,
     OrderRefundToJSON,
+    OrderRemoveDocumentByCodeRequestFromJSON,
+    OrderRemoveDocumentByCodeRequestToJSON,
     OrderReportFulfillmentErrorRequestFromJSON,
     OrderReportFulfillmentErrorRequestToJSON,
     OrderReportFulfillmentNotResolvableRequestFromJSON,
@@ -334,6 +340,14 @@ export interface ListShipmentsRequest {
     body: OrderListShipmentsRequest;
 }
 
+export interface OrderAddDocumentOperationRequest {
+    body: OrderAddDocumentRequest;
+}
+
+export interface OrderRemoveDocumentByCodeOperationRequest {
+    body: OrderRemoveDocumentByCodeRequest;
+}
+
 export interface PrintOrdersLabelsRequest {
     body: OrderPrintOrdersLabelsRequest;
 }
@@ -429,6 +443,10 @@ export class OrderApi extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
+
         const response = await this.request({
             path: `/order.Order/ApproveOrder`,
             method: 'POST',
@@ -461,6 +479,10 @@ export class OrderApi extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
 
         const response = await this.request({
             path: `/order.Order/AssignShipment`,
@@ -495,6 +517,10 @@ export class OrderApi extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
+
         const response = await this.request({
             path: `/order.Order/CalculateRefund`,
             method: 'POST',
@@ -527,6 +553,10 @@ export class OrderApi extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
 
         const response = await this.request({
             path: `/order.Order/CancelFulfillment`,
@@ -561,6 +591,10 @@ export class OrderApi extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
+
         const response = await this.request({
             path: `/order.Order/CancelOrder`,
             method: 'POST',
@@ -593,6 +627,10 @@ export class OrderApi extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
 
         const response = await this.request({
             path: `/order.Order/CancelShipment`,
@@ -627,6 +665,10 @@ export class OrderApi extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
+
         const response = await this.request({
             path: `/order.Order/CompleteShipmentPacking`,
             method: 'POST',
@@ -659,6 +701,10 @@ export class OrderApi extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
 
         const response = await this.request({
             path: `/order.Order/CreateFulfillment`,
@@ -693,6 +739,10 @@ export class OrderApi extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
+
         const response = await this.request({
             path: `/order.Order/CreateOrder`,
             method: 'POST',
@@ -725,6 +775,10 @@ export class OrderApi extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
 
         const response = await this.request({
             path: `/order.Order/CreateHistory`,
@@ -759,6 +813,10 @@ export class OrderApi extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
+
         const response = await this.request({
             path: `/order.Order/CreatePayment`,
             method: 'POST',
@@ -791,6 +849,10 @@ export class OrderApi extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
 
         const response = await this.request({
             path: `/order.Order/CreatePaymentTransaction`,
@@ -825,6 +887,10 @@ export class OrderApi extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
+
         const response = await this.request({
             path: `/order.Order/CreateRefund`,
             method: 'POST',
@@ -857,6 +923,10 @@ export class OrderApi extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
 
         const response = await this.request({
             path: `/order.Order/CreateRefundTransaction`,
@@ -891,6 +961,10 @@ export class OrderApi extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
+
         const response = await this.request({
             path: `/order.Order/CreateShipment`,
             method: 'POST',
@@ -923,6 +997,10 @@ export class OrderApi extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
 
         const response = await this.request({
             path: `/order.Order/DeleteOrder`,
@@ -957,6 +1035,10 @@ export class OrderApi extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
+
         const response = await this.request({
             path: `/order.Order/GetFulfillment`,
             method: 'POST',
@@ -989,6 +1071,10 @@ export class OrderApi extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
 
         const response = await this.request({
             path: `/order.Order/GetOrder`,
@@ -1023,6 +1109,10 @@ export class OrderApi extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
+
         const response = await this.request({
             path: `/order.Order/GetOrderByCartId`,
             method: 'POST',
@@ -1055,6 +1145,10 @@ export class OrderApi extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
 
         const response = await this.request({
             path: `/order.Order/GetOrderByOrderNumber`,
@@ -1089,6 +1183,10 @@ export class OrderApi extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
+
         const response = await this.request({
             path: `/order.Order/GetPayment`,
             method: 'POST',
@@ -1121,6 +1219,10 @@ export class OrderApi extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
 
         const response = await this.request({
             path: `/order.Order/GetShipment`,
@@ -1155,6 +1257,10 @@ export class OrderApi extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
+
         const response = await this.request({
             path: `/order.Order/GetTransaction`,
             method: 'POST',
@@ -1187,6 +1293,10 @@ export class OrderApi extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
 
         const response = await this.request({
             path: `/order.Order/HoldOrder`,
@@ -1221,6 +1331,10 @@ export class OrderApi extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
+
         const response = await this.request({
             path: `/order.Order/ImportOrder`,
             method: 'POST',
@@ -1253,6 +1367,10 @@ export class OrderApi extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
 
         const response = await this.request({
             path: `/order.Order/ListFulfillments`,
@@ -1287,6 +1405,10 @@ export class OrderApi extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
+
         const response = await this.request({
             path: `/order.Order/ListOrders`,
             method: 'POST',
@@ -1319,6 +1441,10 @@ export class OrderApi extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
 
         const response = await this.request({
             path: `/order.Order/ListOrdersByCustomer`,
@@ -1353,6 +1479,10 @@ export class OrderApi extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
+
         const response = await this.request({
             path: `/order.Order/ListOrdersByNumbers`,
             method: 'POST',
@@ -1386,6 +1516,10 @@ export class OrderApi extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
+
         const response = await this.request({
             path: `/order.Order/ListShipments`,
             method: 'POST',
@@ -1406,6 +1540,78 @@ export class OrderApi extends runtime.BaseAPI {
     }
 
     /**
+     * Documents
+     */
+    async orderAddDocumentRaw(requestParameters: OrderAddDocumentOperationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<object>> {
+        if (requestParameters.body === null || requestParameters.body === undefined) {
+            throw new runtime.RequiredError('body','Required parameter requestParameters.body was null or undefined when calling orderAddDocument.');
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
+
+        const response = await this.request({
+            path: `/order.Order/AddDocument`,
+            method: 'POST',
+            headers: headerParameters,
+            query: queryParameters,
+            body: OrderAddDocumentRequestToJSON(requestParameters.body),
+        }, initOverrides);
+
+        return new runtime.JSONApiResponse<any>(response);
+    }
+
+    /**
+     * Documents
+     */
+    async orderAddDocument(requestParameters: OrderAddDocumentOperationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<object> {
+        const response = await this.orderAddDocumentRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
+     */
+    async orderRemoveDocumentByCodeRaw(requestParameters: OrderRemoveDocumentByCodeOperationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<object>> {
+        if (requestParameters.body === null || requestParameters.body === undefined) {
+            throw new runtime.RequiredError('body','Required parameter requestParameters.body was null or undefined when calling orderRemoveDocumentByCode.');
+        }
+
+        const queryParameters: any = {};
+
+        const headerParameters: runtime.HTTPHeaders = {};
+
+        headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
+
+        const response = await this.request({
+            path: `/order.Order/RemoveDocumentByCode`,
+            method: 'POST',
+            headers: headerParameters,
+            query: queryParameters,
+            body: OrderRemoveDocumentByCodeRequestToJSON(requestParameters.body),
+        }, initOverrides);
+
+        return new runtime.JSONApiResponse<any>(response);
+    }
+
+    /**
+     */
+    async orderRemoveDocumentByCode(requestParameters: OrderRemoveDocumentByCodeOperationRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<object> {
+        const response = await this.orderRemoveDocumentByCodeRaw(requestParameters, initOverrides);
+        return await response.value();
+    }
+
+    /**
      * Print Orders Labels
      */
     async printOrdersLabelsRaw(requestParameters: PrintOrdersLabelsRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<OrderPrintOrdersLabelsResponse>> {
@@ -1418,6 +1624,10 @@ export class OrderApi extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
 
         const response = await this.request({
             path: `/order.Order/PrintOrdersLabels`,
@@ -1452,6 +1662,10 @@ export class OrderApi extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
+
         const response = await this.request({
             path: `/order.Order/QuashFulfillment`,
             method: 'POST',
@@ -1484,6 +1698,10 @@ export class OrderApi extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
 
         const response = await this.request({
             path: `/order.Order/QuashShipment`,
@@ -1518,6 +1736,10 @@ export class OrderApi extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
+
         const response = await this.request({
             path: `/order.Order/ReceiveFulfillment`,
             method: 'POST',
@@ -1550,6 +1772,10 @@ export class OrderApi extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
 
         const response = await this.request({
             path: `/order.Order/ReportFulfillmentError`,
@@ -1584,6 +1810,10 @@ export class OrderApi extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
+
         const response = await this.request({
             path: `/order.Order/ReportFulfillmentNotResolvable`,
             method: 'POST',
@@ -1616,6 +1846,10 @@ export class OrderApi extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
 
         const response = await this.request({
             path: `/order.Order/ReportFulfillmentReady`,
@@ -1650,6 +1884,10 @@ export class OrderApi extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
+
         const response = await this.request({
             path: `/order.Order/ReportShipmentDelivery`,
             method: 'POST',
@@ -1682,6 +1920,10 @@ export class OrderApi extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
 
         const response = await this.request({
             path: `/order.Order/ReportShipmentMissingStock`,
@@ -1716,6 +1958,10 @@ export class OrderApi extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
+
         const response = await this.request({
             path: `/order.Order/ResolveShipmentMissingStock`,
             method: 'POST',
@@ -1748,6 +1994,10 @@ export class OrderApi extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
 
         const response = await this.request({
             path: `/order.Order/RetryFulfillment`,
@@ -1782,6 +2032,10 @@ export class OrderApi extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
+
         const response = await this.request({
             path: `/order.Order/SearchOrders`,
             method: 'POST',
@@ -1814,6 +2068,10 @@ export class OrderApi extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
 
         const response = await this.request({
             path: `/order.Order/SendFulfillment`,
@@ -1848,6 +2106,10 @@ export class OrderApi extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
+
         const response = await this.request({
             path: `/order.Order/SendOrderNotification`,
             method: 'POST',
@@ -1880,6 +2142,10 @@ export class OrderApi extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
 
         const response = await this.request({
             path: `/order.Order/StartFulfillmentProcessing`,
@@ -1914,6 +2180,10 @@ export class OrderApi extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
+
         const response = await this.request({
             path: `/order.Order/StartShipmentProcessing`,
             method: 'POST',
@@ -1946,6 +2216,10 @@ export class OrderApi extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
 
         const response = await this.request({
             path: `/order.Order/UnholdOrder`,
@@ -1980,6 +2254,10 @@ export class OrderApi extends runtime.BaseAPI {
 
         headerParameters['Content-Type'] = 'application/json';
 
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
+
         const response = await this.request({
             path: `/order.Order/UpdateOrder`,
             method: 'POST',
@@ -2012,6 +2290,10 @@ export class OrderApi extends runtime.BaseAPI {
         const headerParameters: runtime.HTTPHeaders = {};
 
         headerParameters['Content-Type'] = 'application/json';
+
+        if (this.configuration && this.configuration.apiKey) {
+            headerParameters["Authorization"] = this.configuration.apiKey("Authorization"); // Authorization authentication
+        }
 
         const response = await this.request({
             path: `/order.Order/UpdatePayment`,

@@ -23,13 +23,13 @@ export interface OrderCreateOrderRequest {
      * @type {string}
      * @memberof OrderCreateOrderRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderCreateOrderRequest
      */
-    'number'?: string;
+    'number': string;
     /**
      * 
      * @type {string}
@@ -41,19 +41,19 @@ export interface OrderCreateOrderRequest {
      * @type {string}
      * @memberof OrderCreateOrderRequest
      */
-    'market'?: string;
+    'market': string;
     /**
      * 
      * @type {string}
      * @memberof OrderCreateOrderRequest
      */
-    'locale'?: string;
+    'locale': string;
     /**
      * 
      * @type {Array<OrderOrderDataItem>}
      * @memberof OrderCreateOrderRequest
      */
-    'items'?: Array<OrderOrderDataItem>;
+    'items': Array<OrderOrderDataItem>;
     /**
      * 
      * @type {Array<OrderDataPaymentInfo>}
@@ -83,43 +83,43 @@ export interface OrderCreateOrderRequest {
      * @type {OrderCurrency}
      * @memberof OrderCreateOrderRequest
      */
-    'currency'?: OrderCurrency;
+    'currency': OrderCurrency;
     /**
      * 
      * @type {{ [key: string]: OrderDataSubtotal; }}
      * @memberof OrderCreateOrderRequest
      */
-    'subtotals'?: { [key: string]: OrderDataSubtotal; };
+    'subtotals': { [key: string]: OrderDataSubtotal; };
     /**
      * 
      * @type {{ [key: string]: OrderDataTotal; }}
      * @memberof OrderCreateOrderRequest
      */
-    'totals'?: { [key: string]: OrderDataTotal; };
+    'totals': { [key: string]: OrderDataTotal; };
     /**
      * 
      * @type {boolean}
      * @memberof OrderCreateOrderRequest
      */
-    'vatIncluded'?: boolean;
+    'vatIncluded': boolean;
     /**
      * 
      * @type {OrderPostalAddress}
      * @memberof OrderCreateOrderRequest
      */
-    'billingAddress'?: OrderPostalAddress;
+    'billingAddress': OrderPostalAddress;
     /**
      * 
      * @type {OrderPostalAddress}
      * @memberof OrderCreateOrderRequest
      */
-    'shippingAddress'?: OrderPostalAddress;
+    'shippingAddress': OrderPostalAddress;
     /**
      * 
      * @type {OrderDataCustomerInfo}
      * @memberof OrderCreateOrderRequest
      */
-    'customerInfo'?: OrderDataCustomerInfo;
+    'customerInfo': OrderDataCustomerInfo;
     /**
      * 
      * @type {string}

@@ -15,19 +15,37 @@
 /**
  * 
  * @export
- * @interface OrderAssignShipmentRequest
+ * @interface OrderDataDocument
  */
-export interface OrderAssignShipmentRequest {
+export interface OrderDataDocument {
     /**
      * 
      * @type {string}
-     * @memberof OrderAssignShipmentRequest
+     * @memberof OrderDataDocument
      */
-    'tenantId': string;
+    'code'?: string;
     /**
      * 
      * @type {string}
-     * @memberof OrderAssignShipmentRequest
+     * @memberof OrderDataDocument
      */
-    'shipmentId': string;
+    'label'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof OrderDataDocument
+     */
+    'assetGrn'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof OrderDataDocument
+     */
+    'url'?: string;
+    /**
+     * 
+     * @type {Date}
+     * @memberof OrderDataDocument
+     */
+    'insertedAt'?: Date;
 }

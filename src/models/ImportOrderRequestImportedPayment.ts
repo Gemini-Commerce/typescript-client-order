@@ -23,7 +23,7 @@ export interface ImportOrderRequestImportedPayment {
      * @type {string}
      * @memberof ImportOrderRequestImportedPayment
      */
-    'code'?: string;
+    'code': string;
     /**
      * 
      * @type {string}
@@ -35,11 +35,17 @@ export interface ImportOrderRequestImportedPayment {
      * @type {Array<OrderPaymentAmount>}
      * @memberof ImportOrderRequestImportedPayment
      */
-    'amounts'?: Array<OrderPaymentAmount>;
+    'amounts': Array<OrderPaymentAmount>;
     /**
      * 
      * @type {PaymentCcInfo}
      * @memberof ImportOrderRequestImportedPayment
      */
     'ccInfo'?: PaymentCcInfo;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof ImportOrderRequestImportedPayment
+     */
+    'isUpfront'?: boolean;
 }

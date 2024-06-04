@@ -23,7 +23,7 @@ export interface CreateOrderRequestInitialPayment {
      * @type {string}
      * @memberof CreateOrderRequestInitialPayment
      */
-    'code'?: string;
+    'code': string;
     /**
      * 
      * @type {string}
@@ -35,7 +35,7 @@ export interface CreateOrderRequestInitialPayment {
      * @type {OrderMoney}
      * @memberof CreateOrderRequestInitialPayment
      */
-    'amount'?: OrderMoney;
+    'amount': OrderMoney;
     /**
      * 
      * @type {PaymentCcInfo}

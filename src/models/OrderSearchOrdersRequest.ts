@@ -23,7 +23,7 @@ export interface OrderSearchOrdersRequest {
      * @type {string}
      * @memberof OrderSearchOrdersRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
@@ -72,4 +72,10 @@ export interface OrderSearchOrdersRequest {
      * @memberof OrderSearchOrdersRequest
      */
     'paymentFilter'?: OrderPaymentFilter;
+    /**
+     * 
+     * @type {string}
+     * @memberof OrderSearchOrdersRequest
+     */
+    'agentGrn'?: string;
 }

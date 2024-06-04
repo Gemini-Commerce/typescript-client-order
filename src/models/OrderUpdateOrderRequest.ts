@@ -23,13 +23,13 @@ export interface OrderUpdateOrderRequest {
      * @type {string}
      * @memberof OrderUpdateOrderRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderUpdateOrderRequest
      */
-    'id'?: string;
+    'id': string;
     /**
      * 
      * @type {UpdateOrderRequestPayload}
@@ -38,8 +38,8 @@ export interface OrderUpdateOrderRequest {
     'payload'?: UpdateOrderRequestPayload;
     /**
      * 
-     * @type {Array<string>}
+     * @type {string}
      * @memberof OrderUpdateOrderRequest
      */
-    'fieldMask'?: Array<string>;
+    'fieldMask'?: string;
 }

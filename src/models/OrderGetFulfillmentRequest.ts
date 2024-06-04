@@ -23,11 +23,11 @@ export interface OrderGetFulfillmentRequest {
      * @type {string}
      * @memberof OrderGetFulfillmentRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderGetFulfillmentRequest
      */
-    'id'?: string;
+    'id': string;
 }

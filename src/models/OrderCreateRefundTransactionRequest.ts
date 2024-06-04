@@ -23,13 +23,13 @@ export interface OrderCreateRefundTransactionRequest {
      * @type {string}
      * @memberof OrderCreateRefundTransactionRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderCreateRefundTransactionRequest
      */
-    'refundId'?: string;
+    'refundId': string;
     /**
      * 
      * @type {string}

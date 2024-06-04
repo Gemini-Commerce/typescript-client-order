@@ -61,7 +61,7 @@ export interface PaymentCcInfo {
      */
     'avsStatus'?: string;
     /**
-     * 
+     * card type MasterCard, Visa..
      * @type {string}
      * @memberof PaymentCcInfo
      */

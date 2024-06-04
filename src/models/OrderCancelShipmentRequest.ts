@@ -23,13 +23,13 @@ export interface OrderCancelShipmentRequest {
      * @type {string}
      * @memberof OrderCancelShipmentRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderCancelShipmentRequest
      */
-    'shipmentId'?: string;
+    'shipmentId': string;
     /**
      * 
      * @type {string}

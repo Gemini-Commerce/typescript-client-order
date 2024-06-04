@@ -15,19 +15,19 @@
 /**
  * 
  * @export
- * @interface OrderAssignShipmentRequest
+ * @interface OptionImage
  */
-export interface OrderAssignShipmentRequest {
+export interface OptionImage {
     /**
      * 
      * @type {string}
-     * @memberof OrderAssignShipmentRequest
+     * @memberof OptionImage
      */
-    'tenantId': string;
+    'grn'?: string;
     /**
      * 
      * @type {string}
-     * @memberof OrderAssignShipmentRequest
+     * @memberof OptionImage
      */
-    'shipmentId': string;
+    'url'?: string;
 }

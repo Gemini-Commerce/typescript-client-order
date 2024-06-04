@@ -29,7 +29,7 @@ export interface OrderDataPromotionInfo {
      * @type {string}
      * @memberof OrderDataPromotionInfo
      */
-    'type'?: string;
+    'type': string;
     /**
      * 
      * @type {string}
@@ -41,7 +41,7 @@ export interface OrderDataPromotionInfo {
      * @type {string}
      * @memberof OrderDataPromotionInfo
      */
-    'name'?: string;
+    'name': string;
     /**
      * 
      * @type {string}
@@ -53,7 +53,7 @@ export interface OrderDataPromotionInfo {
      * @type {OrderMoney}
      * @memberof OrderDataPromotionInfo
      */
-    'amount'?: OrderMoney;
+    'amount': OrderMoney;
     /**
      * 
      * @type {string}

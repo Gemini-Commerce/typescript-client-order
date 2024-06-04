@@ -23,11 +23,11 @@ export interface OrderResolveShipmentMissingStockRequest {
      * @type {string}
      * @memberof OrderResolveShipmentMissingStockRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderResolveShipmentMissingStockRequest
      */
-    'shipmentId'?: string;
+    'shipmentId': string;
 }

@@ -71,13 +71,19 @@ export interface OrderOrderData {
      * @type {string}
      * @memberof OrderOrderData
      */
-    'locale'?: string;
+    'locale': string;
     /**
      * 
      * @type {object}
      * @memberof OrderOrderData
      */
     'additionalInfo'?: object;
+    /**
+     * 
+     * @type {Array<OrderDataDocument>}
+     * @memberof OrderOrderData
+     */
+    'documents'?: Array<OrderDataDocument>;
     /**
      * 
      * @type {Array<OrderOrderDataItem>}

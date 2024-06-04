@@ -15,25 +15,37 @@
 /**
  * 
  * @export
- * @interface OrderCancelOrderRequest
+ * @interface ItemProductConfigurationStep
  */
-export interface OrderCancelOrderRequest {
+export interface ItemProductConfigurationStep {
     /**
      * 
      * @type {string}
-     * @memberof OrderCancelOrderRequest
+     * @memberof ItemProductConfigurationStep
      */
-    'tenantId': string;
+    'id'?: string;
     /**
      * 
      * @type {string}
-     * @memberof OrderCancelOrderRequest
+     * @memberof ItemProductConfigurationStep
      */
-    'orderId': string;
+    'grn'?: string;
     /**
      * 
      * @type {string}
-     * @memberof OrderCancelOrderRequest
+     * @memberof ItemProductConfigurationStep
      */
-    'reason'?: string;
+    'label'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ItemProductConfigurationStep
+     */
+    'description'?: string;
+    /**
+     * 
+     * @type {Array<ProductConfigurationStepOption>}
+     * @memberof ItemProductConfigurationStep
+     */
+    'options'?: Array<ProductConfigurationStepOption>;
 }

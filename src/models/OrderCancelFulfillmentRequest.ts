@@ -23,13 +23,13 @@ export interface OrderCancelFulfillmentRequest {
      * @type {string}
      * @memberof OrderCancelFulfillmentRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderCancelFulfillmentRequest
      */
-    'fulfillmentId'?: string;
+    'fulfillmentId': string;
     /**
      * 
      * @type {string}

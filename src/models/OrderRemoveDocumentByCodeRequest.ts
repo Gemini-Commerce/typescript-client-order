@@ -15,19 +15,25 @@
 /**
  * 
  * @export
- * @interface OrderAssignShipmentRequest
+ * @interface OrderRemoveDocumentByCodeRequest
  */
-export interface OrderAssignShipmentRequest {
+export interface OrderRemoveDocumentByCodeRequest {
     /**
      * 
      * @type {string}
-     * @memberof OrderAssignShipmentRequest
+     * @memberof OrderRemoveDocumentByCodeRequest
      */
     'tenantId': string;
     /**
      * 
      * @type {string}
-     * @memberof OrderAssignShipmentRequest
+     * @memberof OrderRemoveDocumentByCodeRequest
      */
-    'shipmentId': string;
+    'orderId': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof OrderRemoveDocumentByCodeRequest
+     */
+    'code': string;
 }

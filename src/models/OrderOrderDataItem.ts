@@ -98,6 +98,18 @@ export interface OrderOrderDataItem {
     'rowBasePrice'?: OrderMoney;
     /**
      * 
+     * @type {OrderMoney}
+     * @memberof OrderOrderDataItem
+     */
+    'unitCustomPrice'?: OrderMoney;
+    /**
+     * 
+     * @type {OrderMoney}
+     * @memberof OrderOrderDataItem
+     */
+    'rowCustomPrice'?: OrderMoney;
+    /**
+     * 
      * @type {number}
      * @memberof OrderOrderDataItem
      */
@@ -168,4 +180,10 @@ export interface OrderOrderDataItem {
      * @memberof OrderOrderDataItem
      */
     'productIsVirtual'?: boolean;
+    /**
+     * 
+     * @type {Array<ItemProductConfigurationStep>}
+     * @memberof OrderOrderDataItem
+     */
+    'productConfiguration'?: Array<ItemProductConfigurationStep>;
 }

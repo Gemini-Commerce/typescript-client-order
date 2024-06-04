@@ -23,11 +23,11 @@ export interface OrderDataTotal {
      * @type {OrderDataTotalCode}
      * @memberof OrderDataTotal
      */
-    'code'?: OrderDataTotalCode;
+    'code': OrderDataTotalCode;
     /**
      * 
      * @type {OrderMoney}
      * @memberof OrderDataTotal
      */
-    'value'?: OrderMoney;
+    'value': OrderMoney;
 }

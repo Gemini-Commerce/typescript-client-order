@@ -23,11 +23,11 @@ export interface OrderDataSubtotal {
      * @type {OrderDataSubtotalCode}
      * @memberof OrderDataSubtotal
      */
-    'code'?: OrderDataSubtotalCode;
+    'code': OrderDataSubtotalCode;
     /**
      * 
      * @type {OrderMoney}
      * @memberof OrderDataSubtotal
      */
-    'value'?: OrderMoney;
+    'value': OrderMoney;
 }

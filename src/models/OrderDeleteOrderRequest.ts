@@ -23,11 +23,11 @@ export interface OrderDeleteOrderRequest {
      * @type {string}
      * @memberof OrderDeleteOrderRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderDeleteOrderRequest
      */
-    'orderId'?: string;
+    'orderId': string;
 }

@@ -23,13 +23,13 @@ export interface OrderCreateRefundRequest {
      * @type {string}
      * @memberof OrderCreateRefundRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderCreateRefundRequest
      */
-    'paymentId'?: string;
+    'paymentId': string;
     /**
      * 
      * @type {Array<OrderRefundItem>}
@@ -41,7 +41,7 @@ export interface OrderCreateRefundRequest {
      * @type {Array<OrderRefundAmount>}
      * @memberof OrderCreateRefundRequest
      */
-    'amounts'?: Array<OrderRefundAmount>;
+    'amounts': Array<OrderRefundAmount>;
     /**
      * 
      * @type {string}

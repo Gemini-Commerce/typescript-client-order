@@ -23,7 +23,7 @@ export interface OrderListOrdersRequest {
      * @type {string}
      * @memberof OrderListOrdersRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * The maximum number of orders to return. The service may return fewer than this value. If unspecified, at most 10 orders will be returned. The maximum value is 100; values above 100 will be coerced to 100.
      * @type {number}

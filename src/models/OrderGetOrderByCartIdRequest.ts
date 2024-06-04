@@ -23,11 +23,11 @@ export interface OrderGetOrderByCartIdRequest {
      * @type {string}
      * @memberof OrderGetOrderByCartIdRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderGetOrderByCartIdRequest
      */
-    'cartId'?: string;
+    'cartId': string;
 }

@@ -23,19 +23,19 @@ export interface OrderCreatePaymentTransactionRequest {
      * @type {string}
      * @memberof OrderCreatePaymentTransactionRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderCreatePaymentTransactionRequest
      */
-    'paymentId'?: string;
+    'paymentId': string;
     /**
      * 
      * @type {OrderTransactionType}
      * @memberof OrderCreatePaymentTransactionRequest
      */
-    'type'?: OrderTransactionType;
+    'type': OrderTransactionType;
     /**
      * 
      * @type {string}

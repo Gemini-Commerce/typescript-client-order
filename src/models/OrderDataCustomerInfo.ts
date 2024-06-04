@@ -29,19 +29,19 @@ export interface OrderDataCustomerInfo {
      * @type {string}
      * @memberof OrderDataCustomerInfo
      */
-    'firstname'?: string;
+    'firstname': string;
     /**
      * 
      * @type {string}
      * @memberof OrderDataCustomerInfo
      */
-    'lastname'?: string;
+    'lastname': string;
     /**
      * 
      * @type {string}
      * @memberof OrderDataCustomerInfo
      */
-    'email'?: string;
+    'email': string;
     /**
      * 
      * @type {string}
@@ -72,4 +72,28 @@ export interface OrderDataCustomerInfo {
      * @memberof OrderDataCustomerInfo
      */
     'taxCode'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof OrderDataCustomerInfo
+     */
+    'sdiCode'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof OrderDataCustomerInfo
+     */
+    'fiscalCode'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof OrderDataCustomerInfo
+     */
+    'companyName'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof OrderDataCustomerInfo
+     */
+    'agentGrn'?: string;
 }

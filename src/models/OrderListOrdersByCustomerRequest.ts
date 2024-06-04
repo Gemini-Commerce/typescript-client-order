@@ -23,13 +23,13 @@ export interface OrderListOrdersByCustomerRequest {
      * @type {string}
      * @memberof OrderListOrdersByCustomerRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderListOrdersByCustomerRequest
      */
-    'customerGrn'?: string;
+    'customerGrn': string;
     /**
      * The maximum number of orders to return. The service may return fewer than this value. If unspecified, at most 10 orders will be returned. The maximum value is 100; values above 100 will be coerced to 100.
      * @type {number}
@@ -42,4 +42,10 @@ export interface OrderListOrdersByCustomerRequest {
      * @memberof OrderListOrdersByCustomerRequest
      */
     'pageToken'?: string;
+    /**
+     * 
+     * @type {Array<OrderOrderBy>}
+     * @memberof OrderListOrdersByCustomerRequest
+     */
+    'orderBy'?: Array<OrderOrderBy>;
 }

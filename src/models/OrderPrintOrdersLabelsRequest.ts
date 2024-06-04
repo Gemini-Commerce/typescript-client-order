@@ -23,11 +23,11 @@ export interface OrderPrintOrdersLabelsRequest {
      * @type {string}
      * @memberof OrderPrintOrdersLabelsRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {Array<string>}
      * @memberof OrderPrintOrdersLabelsRequest
      */
-    'orderNumbers'?: Array<string>;
+    'orderNumbers': Array<string>;
 }

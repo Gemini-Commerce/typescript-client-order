@@ -23,13 +23,13 @@ export interface OrderCreateHistoryRequest {
      * @type {string}
      * @memberof OrderCreateHistoryRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderCreateHistoryRequest
      */
-    'orderId'?: string;
+    'orderId': string;
     /**
      * 
      * @type {string}
