@@ -34,7 +34,7 @@ export interface CreateOrderRequestInitialPayment {
      * @type {string}
      * @memberof CreateOrderRequestInitialPayment
      */
-    'code'?: string;
+    'code': string;
     /**
      * 
      * @type {string}
@@ -46,7 +46,7 @@ export interface CreateOrderRequestInitialPayment {
      * @type {OrderMoney}
      * @memberof CreateOrderRequestInitialPayment
      */
-    'amount'?: OrderMoney;
+    'amount': OrderMoney;
     /**
      * 
      * @type {PaymentCcInfo}
@@ -71,7 +71,7 @@ export interface ImportOrderRequestImportedPayment {
      * @type {string}
      * @memberof ImportOrderRequestImportedPayment
      */
-    'code'?: string;
+    'code': string;
     /**
      * 
      * @type {string}
@@ -83,13 +83,19 @@ export interface ImportOrderRequestImportedPayment {
      * @type {Array<OrderPaymentAmount>}
      * @memberof ImportOrderRequestImportedPayment
      */
-    'amounts'?: Array<OrderPaymentAmount>;
+    'amounts': Array<OrderPaymentAmount>;
     /**
      * 
      * @type {PaymentCcInfo}
      * @memberof ImportOrderRequestImportedPayment
      */
     'ccInfo'?: PaymentCcInfo;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof ImportOrderRequestImportedPayment
+     */
+    'isUpfront'?: boolean;
 }
 /**
  * 
@@ -102,7 +108,7 @@ export interface InitialPaymentInitialTransaction {
      * @type {OrderTransactionType}
      * @memberof InitialPaymentInitialTransaction
      */
-    'type'?: OrderTransactionType;
+    'type': OrderTransactionType;
     /**
      * 
      * @type {string}
@@ -115,6 +121,105 @@ export interface InitialPaymentInitialTransaction {
 /**
  * 
  * @export
+ * @interface ItemProductConfigurationStep
+ */
+export interface ItemProductConfigurationStep {
+    /**
+     * 
+     * @type {string}
+     * @memberof ItemProductConfigurationStep
+     */
+    'id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ItemProductConfigurationStep
+     */
+    'grn'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ItemProductConfigurationStep
+     */
+    'label'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ItemProductConfigurationStep
+     */
+    'description'?: string;
+    /**
+     * 
+     * @type {Array<ProductConfigurationStepOption>}
+     * @memberof ItemProductConfigurationStep
+     */
+    'options'?: Array<ProductConfigurationStepOption>;
+}
+/**
+ * 
+ * @export
+ * @interface OptionImage
+ */
+export interface OptionImage {
+    /**
+     * 
+     * @type {string}
+     * @memberof OptionImage
+     */
+    'grn'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof OptionImage
+     */
+    'url'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface OrderAddDocumentRequest
+ */
+export interface OrderAddDocumentRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof OrderAddDocumentRequest
+     */
+    'tenantId': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof OrderAddDocumentRequest
+     */
+    'orderId': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof OrderAddDocumentRequest
+     */
+    'code': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof OrderAddDocumentRequest
+     */
+    'label'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof OrderAddDocumentRequest
+     */
+    'assetGrn'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof OrderAddDocumentRequest
+     */
+    'url'?: string;
+}
+/**
+ * 
+ * @export
  * @interface OrderApproveOrderRequest
  */
 export interface OrderApproveOrderRequest {
@@ -123,13 +228,13 @@ export interface OrderApproveOrderRequest {
      * @type {string}
      * @memberof OrderApproveOrderRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderApproveOrderRequest
      */
-    'orderId'?: string;
+    'orderId': string;
 }
 /**
  * 
@@ -142,13 +247,13 @@ export interface OrderAssignShipmentRequest {
      * @type {string}
      * @memberof OrderAssignShipmentRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderAssignShipmentRequest
      */
-    'shipmentId'?: string;
+    'shipmentId': string;
 }
 /**
  * 
@@ -176,13 +281,13 @@ export interface OrderCalculateRefundRequest {
      * @type {string}
      * @memberof OrderCalculateRefundRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderCalculateRefundRequest
      */
-    'paymentId'?: string;
+    'paymentId': string;
     /**
      * 
      * @type {Array<OrderRefundItem>}
@@ -220,13 +325,13 @@ export interface OrderCancelFulfillmentRequest {
      * @type {string}
      * @memberof OrderCancelFulfillmentRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderCancelFulfillmentRequest
      */
-    'fulfillmentId'?: string;
+    'fulfillmentId': string;
     /**
      * 
      * @type {string}
@@ -245,13 +350,13 @@ export interface OrderCancelOrderRequest {
      * @type {string}
      * @memberof OrderCancelOrderRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderCancelOrderRequest
      */
-    'orderId'?: string;
+    'orderId': string;
     /**
      * 
      * @type {string}
@@ -270,13 +375,13 @@ export interface OrderCancelShipmentRequest {
      * @type {string}
      * @memberof OrderCancelShipmentRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderCancelShipmentRequest
      */
-    'shipmentId'?: string;
+    'shipmentId': string;
     /**
      * 
      * @type {string}
@@ -295,13 +400,13 @@ export interface OrderCompleteShipmentPackingRequest {
      * @type {string}
      * @memberof OrderCompleteShipmentPackingRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderCompleteShipmentPackingRequest
      */
-    'shipmentId'?: string;
+    'shipmentId': string;
 }
 /**
  * 
@@ -314,19 +419,19 @@ export interface OrderCreateFulfillmentRequest {
      * @type {string}
      * @memberof OrderCreateFulfillmentRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderCreateFulfillmentRequest
      */
-    'orderId'?: string;
+    'orderId': string;
     /**
      * 
      * @type {Array<OrderFulfillmentItem>}
      * @memberof OrderCreateFulfillmentRequest
      */
-    'items'?: Array<OrderFulfillmentItem>;
+    'items': Array<OrderFulfillmentItem>;
 }
 /**
  * 
@@ -339,13 +444,13 @@ export interface OrderCreateHistoryRequest {
      * @type {string}
      * @memberof OrderCreateHistoryRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderCreateHistoryRequest
      */
-    'orderId'?: string;
+    'orderId': string;
     /**
      * 
      * @type {string}
@@ -364,13 +469,13 @@ export interface OrderCreateOrderRequest {
      * @type {string}
      * @memberof OrderCreateOrderRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderCreateOrderRequest
      */
-    'number'?: string;
+    'number': string;
     /**
      * 
      * @type {string}
@@ -382,19 +487,19 @@ export interface OrderCreateOrderRequest {
      * @type {string}
      * @memberof OrderCreateOrderRequest
      */
-    'market'?: string;
+    'market': string;
     /**
      * 
      * @type {string}
      * @memberof OrderCreateOrderRequest
      */
-    'locale'?: string;
+    'locale': string;
     /**
      * 
      * @type {Array<OrderOrderDataItem>}
      * @memberof OrderCreateOrderRequest
      */
-    'items'?: Array<OrderOrderDataItem>;
+    'items': Array<OrderOrderDataItem>;
     /**
      * 
      * @type {Array<OrderDataPaymentInfo>}
@@ -424,43 +529,43 @@ export interface OrderCreateOrderRequest {
      * @type {OrderCurrency}
      * @memberof OrderCreateOrderRequest
      */
-    'currency'?: OrderCurrency;
+    'currency': OrderCurrency;
     /**
      * 
      * @type {{ [key: string]: OrderDataSubtotal; }}
      * @memberof OrderCreateOrderRequest
      */
-    'subtotals'?: { [key: string]: OrderDataSubtotal; };
+    'subtotals': { [key: string]: OrderDataSubtotal; };
     /**
      * 
      * @type {{ [key: string]: OrderDataTotal; }}
      * @memberof OrderCreateOrderRequest
      */
-    'totals'?: { [key: string]: OrderDataTotal; };
+    'totals': { [key: string]: OrderDataTotal; };
     /**
      * 
      * @type {boolean}
      * @memberof OrderCreateOrderRequest
      */
-    'vatIncluded'?: boolean;
+    'vatIncluded': boolean;
     /**
      * 
      * @type {OrderPostalAddress}
      * @memberof OrderCreateOrderRequest
      */
-    'billingAddress'?: OrderPostalAddress;
+    'billingAddress': OrderPostalAddress;
     /**
      * 
      * @type {OrderPostalAddress}
      * @memberof OrderCreateOrderRequest
      */
-    'shippingAddress'?: OrderPostalAddress;
+    'shippingAddress': OrderPostalAddress;
     /**
      * 
      * @type {OrderDataCustomerInfo}
      * @memberof OrderCreateOrderRequest
      */
-    'customerInfo'?: OrderDataCustomerInfo;
+    'customerInfo': OrderDataCustomerInfo;
     /**
      * 
      * @type {string}
@@ -493,19 +598,19 @@ export interface OrderCreatePaymentRequest {
      * @type {string}
      * @memberof OrderCreatePaymentRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderCreatePaymentRequest
      */
-    'orderId'?: string;
+    'orderId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderCreatePaymentRequest
      */
-    'code'?: string;
+    'code': string;
     /**
      * 
      * @type {string}
@@ -517,7 +622,7 @@ export interface OrderCreatePaymentRequest {
      * @type {OrderMoney}
      * @memberof OrderCreatePaymentRequest
      */
-    'amount'?: OrderMoney;
+    'amount': OrderMoney;
     /**
      * 
      * @type {PaymentCcInfo}
@@ -536,19 +641,19 @@ export interface OrderCreatePaymentTransactionRequest {
      * @type {string}
      * @memberof OrderCreatePaymentTransactionRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderCreatePaymentTransactionRequest
      */
-    'paymentId'?: string;
+    'paymentId': string;
     /**
      * 
      * @type {OrderTransactionType}
      * @memberof OrderCreatePaymentTransactionRequest
      */
-    'type'?: OrderTransactionType;
+    'type': OrderTransactionType;
     /**
      * 
      * @type {string}
@@ -569,13 +674,13 @@ export interface OrderCreateRefundRequest {
      * @type {string}
      * @memberof OrderCreateRefundRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderCreateRefundRequest
      */
-    'paymentId'?: string;
+    'paymentId': string;
     /**
      * 
      * @type {Array<OrderRefundItem>}
@@ -587,7 +692,7 @@ export interface OrderCreateRefundRequest {
      * @type {Array<OrderRefundAmount>}
      * @memberof OrderCreateRefundRequest
      */
-    'amounts'?: Array<OrderRefundAmount>;
+    'amounts': Array<OrderRefundAmount>;
     /**
      * 
      * @type {string}
@@ -612,13 +717,13 @@ export interface OrderCreateRefundTransactionRequest {
      * @type {string}
      * @memberof OrderCreateRefundTransactionRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderCreateRefundTransactionRequest
      */
-    'refundId'?: string;
+    'refundId': string;
     /**
      * 
      * @type {string}
@@ -651,25 +756,25 @@ export interface OrderCreateShipmentRequest {
      * @type {string}
      * @memberof OrderCreateShipmentRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderCreateShipmentRequest
      */
-    'orderId'?: string;
+    'orderId': string;
     /**
      * 
      * @type {Array<OrderShipmentItem>}
      * @memberof OrderCreateShipmentRequest
      */
-    'items'?: Array<OrderShipmentItem>;
+    'items': Array<OrderShipmentItem>;
     /**
      * 
      * @type {OrderPostalAddress}
      * @memberof OrderCreateShipmentRequest
      */
-    'address'?: OrderPostalAddress;
+    'address': OrderPostalAddress;
     /**
      * 
      * @type {OrderPostalAddress}
@@ -684,6 +789,18 @@ export interface OrderCreateShipmentRequest {
     'returnAddress'?: OrderPostalAddress;
     /**
      * 
+     * @type {Array<ShipmentTracking>}
+     * @memberof OrderCreateShipmentRequest
+     */
+    'tracking'?: Array<ShipmentTracking>;
+    /**
+     * 
+     * @type {Array<ShipmentTracking>}
+     * @memberof OrderCreateShipmentRequest
+     */
+    'returnTracking'?: Array<ShipmentTracking>;
+    /**
+     * 
      * @type {string}
      * @memberof OrderCreateShipmentRequest
      */
@@ -696,7 +813,7 @@ export interface OrderCreateShipmentRequest {
     'method'?: string;
 }
 /**
- * 
+ * Stands for Albania, not all ;-)
  * @export
  * @enum {string}
  */
@@ -902,19 +1019,19 @@ export interface OrderDataCustomerInfo {
      * @type {string}
      * @memberof OrderDataCustomerInfo
      */
-    'firstname'?: string;
+    'firstname': string;
     /**
      * 
      * @type {string}
      * @memberof OrderDataCustomerInfo
      */
-    'lastname'?: string;
+    'lastname': string;
     /**
      * 
      * @type {string}
      * @memberof OrderDataCustomerInfo
      */
-    'email'?: string;
+    'email': string;
     /**
      * 
      * @type {string}
@@ -945,6 +1062,67 @@ export interface OrderDataCustomerInfo {
      * @memberof OrderDataCustomerInfo
      */
     'taxCode'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof OrderDataCustomerInfo
+     */
+    'sdiCode'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof OrderDataCustomerInfo
+     */
+    'fiscalCode'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof OrderDataCustomerInfo
+     */
+    'companyName'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof OrderDataCustomerInfo
+     */
+    'agentGrn'?: string;
+}
+/**
+ * 
+ * @export
+ * @interface OrderDataDocument
+ */
+export interface OrderDataDocument {
+    /**
+     * 
+     * @type {string}
+     * @memberof OrderDataDocument
+     */
+    'code'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof OrderDataDocument
+     */
+    'label'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof OrderDataDocument
+     */
+    'assetGrn'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof OrderDataDocument
+     */
+    'url'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof OrderDataDocument
+     */
+    'insertedAt'?: string;
 }
 /**
  * 
@@ -982,7 +1160,7 @@ export interface OrderDataPaymentInfo {
      * @type {string}
      * @memberof OrderDataPaymentInfo
      */
-    'code'?: string;
+    'code': string;
     /**
      * 
      * @type {string}
@@ -994,7 +1172,7 @@ export interface OrderDataPaymentInfo {
      * @type {OrderMoney}
      * @memberof OrderDataPaymentInfo
      */
-    'amount'?: OrderMoney;
+    'amount': OrderMoney;
     /**
      * 
      * @type {OrderMoney}
@@ -1055,7 +1233,7 @@ export interface OrderDataPromotionInfo {
      * @type {string}
      * @memberof OrderDataPromotionInfo
      */
-    'type'?: string;
+    'type': string;
     /**
      * 
      * @type {string}
@@ -1067,7 +1245,7 @@ export interface OrderDataPromotionInfo {
      * @type {string}
      * @memberof OrderDataPromotionInfo
      */
-    'name'?: string;
+    'name': string;
     /**
      * 
      * @type {string}
@@ -1079,7 +1257,7 @@ export interface OrderDataPromotionInfo {
      * @type {OrderMoney}
      * @memberof OrderDataPromotionInfo
      */
-    'amount'?: OrderMoney;
+    'amount': OrderMoney;
     /**
      * 
      * @type {string}
@@ -1122,13 +1300,13 @@ export interface OrderDataShipmentInfo {
      * @type {string}
      * @memberof OrderDataShipmentInfo
      */
-    'reference'?: string;
+    'reference': string;
     /**
      * 
      * @type {string}
      * @memberof OrderDataShipmentInfo
      */
-    'code'?: string;
+    'code': string;
     /**
      * 
      * @type {string}
@@ -1152,7 +1330,7 @@ export interface OrderDataShipmentInfo {
      * @type {OrderMoney}
      * @memberof OrderDataShipmentInfo
      */
-    'amount'?: OrderMoney;
+    'amount': OrderMoney;
     /**
      * 
      * @type {OrderMoney}
@@ -1213,18 +1391,18 @@ export interface OrderDataSubtotal {
      * @type {OrderDataSubtotalCode}
      * @memberof OrderDataSubtotal
      */
-    'code'?: OrderDataSubtotalCode;
+    'code': OrderDataSubtotalCode;
     /**
      * 
      * @type {OrderMoney}
      * @memberof OrderDataSubtotal
      */
-    'value'?: OrderMoney;
+    'value': OrderMoney;
 }
 
 
 /**
- * 
+ *  - ITEMS: gross discount items amount.  - ITEMS_DISCOUNTED: discounted items amount.  - DISCOUNT: discount amount. It is a NEGATIVE amount.
  * @export
  * @enum {string}
  */
@@ -1253,13 +1431,13 @@ export interface OrderDataTotal {
      * @type {OrderDataTotalCode}
      * @memberof OrderDataTotal
      */
-    'code'?: OrderDataTotalCode;
+    'code': OrderDataTotalCode;
     /**
      * 
      * @type {OrderMoney}
      * @memberof OrderDataTotal
      */
-    'value'?: OrderMoney;
+    'value': OrderMoney;
 }
 
 
@@ -1290,13 +1468,13 @@ export interface OrderDeleteOrderRequest {
      * @type {string}
      * @memberof OrderDeleteOrderRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderDeleteOrderRequest
      */
-    'orderId'?: string;
+    'orderId': string;
 }
 /**
  * 
@@ -1371,13 +1549,13 @@ export interface OrderGetFulfillmentRequest {
      * @type {string}
      * @memberof OrderGetFulfillmentRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderGetFulfillmentRequest
      */
-    'id'?: string;
+    'id': string;
 }
 /**
  * 
@@ -1390,13 +1568,13 @@ export interface OrderGetOrderByCartIdRequest {
      * @type {string}
      * @memberof OrderGetOrderByCartIdRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderGetOrderByCartIdRequest
      */
-    'cartId'?: string;
+    'cartId': string;
 }
 /**
  * 
@@ -1409,13 +1587,13 @@ export interface OrderGetOrderByOrderNumberRequest {
      * @type {string}
      * @memberof OrderGetOrderByOrderNumberRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderGetOrderByOrderNumberRequest
      */
-    'orderNumber'?: string;
+    'orderNumber': string;
 }
 /**
  * 
@@ -1428,13 +1606,13 @@ export interface OrderGetOrderRequest {
      * @type {string}
      * @memberof OrderGetOrderRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderGetOrderRequest
      */
-    'id'?: string;
+    'id': string;
 }
 /**
  * 
@@ -1447,13 +1625,13 @@ export interface OrderGetPaymentRequest {
      * @type {string}
      * @memberof OrderGetPaymentRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderGetPaymentRequest
      */
-    'id'?: string;
+    'id': string;
 }
 /**
  * 
@@ -1466,13 +1644,13 @@ export interface OrderGetShipmentRequest {
      * @type {string}
      * @memberof OrderGetShipmentRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderGetShipmentRequest
      */
-    'id'?: string;
+    'id': string;
 }
 /**
  * 
@@ -1485,13 +1663,13 @@ export interface OrderGetTransactionRequest {
      * @type {string}
      * @memberof OrderGetTransactionRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderGetTransactionRequest
      */
-    'id'?: string;
+    'id': string;
 }
 /**
  * 
@@ -1510,7 +1688,7 @@ export interface OrderHoldOrderRequest {
      * @type {string}
      * @memberof OrderHoldOrderRequest
      */
-    'orderId'?: string;
+    'orderId': string;
     /**
      * 
      * @type {string}
@@ -1529,7 +1707,7 @@ export interface OrderImportOrderRequest {
      * @type {string}
      * @memberof OrderImportOrderRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
@@ -1541,7 +1719,7 @@ export interface OrderImportOrderRequest {
      * @type {string}
      * @memberof OrderImportOrderRequest
      */
-    'number'?: string;
+    'number': string;
     /**
      * 
      * @type {string}
@@ -1553,79 +1731,79 @@ export interface OrderImportOrderRequest {
      * @type {string}
      * @memberof OrderImportOrderRequest
      */
-    'market'?: string;
+    'market': string;
     /**
      * 
      * @type {string}
      * @memberof OrderImportOrderRequest
      */
-    'locale'?: string;
+    'locale': string;
     /**
      * 
      * @type {OrderDataCustomerInfo}
      * @memberof OrderImportOrderRequest
      */
-    'customerInfo'?: OrderDataCustomerInfo;
+    'customerInfo': OrderDataCustomerInfo;
     /**
      * 
      * @type {OrderPostalAddress}
      * @memberof OrderImportOrderRequest
      */
-    'shippingAddress'?: OrderPostalAddress;
+    'shippingAddress': OrderPostalAddress;
     /**
      * 
      * @type {OrderPostalAddress}
      * @memberof OrderImportOrderRequest
      */
-    'billingAddress'?: OrderPostalAddress;
+    'billingAddress': OrderPostalAddress;
     /**
      * 
      * @type {Array<ImportOrderRequestImportedPayment>}
      * @memberof OrderImportOrderRequest
      */
-    'payments'?: Array<ImportOrderRequestImportedPayment>;
+    'payments': Array<ImportOrderRequestImportedPayment>;
     /**
      * 
      * @type {Array<OrderDataPaymentInfo>}
      * @memberof OrderImportOrderRequest
      */
-    'paymentsInfo'?: Array<OrderDataPaymentInfo>;
+    'paymentsInfo': Array<OrderDataPaymentInfo>;
     /**
      * 
      * @type {Array<OrderDataShipmentInfo>}
      * @memberof OrderImportOrderRequest
      */
-    'shipmentsInfo'?: Array<OrderDataShipmentInfo>;
+    'shipmentsInfo': Array<OrderDataShipmentInfo>;
     /**
      * 
      * @type {Array<OrderOrderDataItem>}
      * @memberof OrderImportOrderRequest
      */
-    'items'?: Array<OrderOrderDataItem>;
+    'items': Array<OrderOrderDataItem>;
     /**
      * 
      * @type {{ [key: string]: OrderDataSubtotal; }}
      * @memberof OrderImportOrderRequest
      */
-    'subtotals'?: { [key: string]: OrderDataSubtotal; };
+    'subtotals': { [key: string]: OrderDataSubtotal; };
     /**
      * 
      * @type {{ [key: string]: OrderDataTotal; }}
      * @memberof OrderImportOrderRequest
      */
-    'totals'?: { [key: string]: OrderDataTotal; };
+    'totals': { [key: string]: OrderDataTotal; };
     /**
      * 
      * @type {string}
      * @memberof OrderImportOrderRequest
      */
-    'status'?: string;
+    'status': string;
     /**
      * 
      * @type {OrderCurrency}
      * @memberof OrderImportOrderRequest
      */
-    'currency'?: OrderCurrency;
+    'currency': OrderCurrency;
 }
 
 
@@ -1640,7 +1818,7 @@ export interface OrderListFulfillmentsRequest {
      * @type {string}
      * @memberof OrderListFulfillmentsRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
@@ -1672,13 +1850,13 @@ export interface OrderListOrdersByCustomerRequest {
      * @type {string}
      * @memberof OrderListOrdersByCustomerRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderListOrdersByCustomerRequest
      */
-    'customerGrn'?: string;
+    'customerGrn': string;
     /**
      * The maximum number of orders to return. The service may return fewer than this value. If unspecified, at most 10 orders will be returned. The maximum value is 100; values above 100 will be coerced to 100.
      * @type {number}
@@ -1691,6 +1869,12 @@ export interface OrderListOrdersByCustomerRequest {
      * @memberof OrderListOrdersByCustomerRequest
      */
     'pageToken'?: string;
+    /**
+     * 
+     * @type {Array<OrderOrderBy>}
+     * @memberof OrderListOrdersByCustomerRequest
+     */
+    'orderBy'?: Array<OrderOrderBy>;
 }
 /**
  * 
@@ -1722,13 +1906,13 @@ export interface OrderListOrdersByNumbersRequest {
      * @type {string}
      * @memberof OrderListOrdersByNumbersRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {Array<string>}
      * @memberof OrderListOrdersByNumbersRequest
      */
-    'numbers'?: Array<string>;
+    'numbers': Array<string>;
     /**
      * The maximum number of orders to return. The service may return fewer than this value. If unspecified, at most 10 orders will be returned. The maximum value is 100; values above 100 will be coerced to 100.
      * @type {number}
@@ -1772,7 +1956,7 @@ export interface OrderListOrdersRequest {
      * @type {string}
      * @memberof OrderListOrdersRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * The maximum number of orders to return. The service may return fewer than this value. If unspecified, at most 10 orders will be returned. The maximum value is 100; values above 100 will be coerced to 100.
      * @type {number}
@@ -1828,7 +2012,7 @@ export interface OrderListShipmentsRequest {
      * @type {string}
      * @memberof OrderListShipmentsRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
@@ -1961,13 +2145,19 @@ export interface OrderOrderData {
      * @type {string}
      * @memberof OrderOrderData
      */
-    'locale'?: string;
+    'locale': string;
     /**
      * 
      * @type {object}
      * @memberof OrderOrderData
      */
     'additionalInfo'?: object;
+    /**
+     * 
+     * @type {Array<OrderDataDocument>}
+     * @memberof OrderOrderData
+     */
+    'documents'?: Array<OrderDataDocument>;
     /**
      * 
      * @type {Array<OrderOrderDataItem>}
@@ -2183,6 +2373,18 @@ export interface OrderOrderDataItem {
     'rowBasePrice'?: OrderMoney;
     /**
      * 
+     * @type {OrderMoney}
+     * @memberof OrderOrderDataItem
+     */
+    'unitCustomPrice'?: OrderMoney;
+    /**
+     * 
+     * @type {OrderMoney}
+     * @memberof OrderOrderDataItem
+     */
+    'rowCustomPrice'?: OrderMoney;
+    /**
+     * 
      * @type {number}
      * @memberof OrderOrderDataItem
      */
@@ -2253,6 +2455,12 @@ export interface OrderOrderDataItem {
      * @memberof OrderOrderDataItem
      */
     'productIsVirtual'?: boolean;
+    /**
+     * 
+     * @type {Array<ItemProductConfigurationStep>}
+     * @memberof OrderOrderDataItem
+     */
+    'productConfiguration'?: Array<ItemProductConfigurationStep>;
 }
 /**
  * 
@@ -2273,7 +2481,7 @@ export interface OrderPayment {
      */
     'id'?: string;
     /**
-     * 
+     * payment type stripe, paypal..
      * @type {string}
      * @memberof OrderPayment
      */
@@ -2473,13 +2681,13 @@ export interface OrderPrintOrdersLabelsRequest {
      * @type {string}
      * @memberof OrderPrintOrdersLabelsRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {Array<string>}
      * @memberof OrderPrintOrdersLabelsRequest
      */
-    'orderNumbers'?: Array<string>;
+    'orderNumbers': Array<string>;
 }
 /**
  * 
@@ -2511,13 +2719,13 @@ export interface OrderQuashFulfillmentRequest {
      * @type {string}
      * @memberof OrderQuashFulfillmentRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderQuashFulfillmentRequest
      */
-    'fulfillmentId'?: string;
+    'fulfillmentId': string;
     /**
      * 
      * @type {string}
@@ -2536,13 +2744,13 @@ export interface OrderQuashShipmentRequest {
      * @type {string}
      * @memberof OrderQuashShipmentRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderQuashShipmentRequest
      */
-    'shipmentId'?: string;
+    'shipmentId': string;
     /**
      * 
      * @type {string}
@@ -2561,13 +2769,13 @@ export interface OrderReceiveFulfillmentRequest {
      * @type {string}
      * @memberof OrderReceiveFulfillmentRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderReceiveFulfillmentRequest
      */
-    'fulfillmentId'?: string;
+    'fulfillmentId': string;
 }
 /**
  * 
@@ -2682,6 +2890,31 @@ export interface OrderRefundItem {
 /**
  * 
  * @export
+ * @interface OrderRemoveDocumentByCodeRequest
+ */
+export interface OrderRemoveDocumentByCodeRequest {
+    /**
+     * 
+     * @type {string}
+     * @memberof OrderRemoveDocumentByCodeRequest
+     */
+    'tenantId': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof OrderRemoveDocumentByCodeRequest
+     */
+    'orderId': string;
+    /**
+     * 
+     * @type {string}
+     * @memberof OrderRemoveDocumentByCodeRequest
+     */
+    'code': string;
+}
+/**
+ * 
+ * @export
  * @interface OrderReportFulfillmentErrorRequest
  */
 export interface OrderReportFulfillmentErrorRequest {
@@ -2690,13 +2923,13 @@ export interface OrderReportFulfillmentErrorRequest {
      * @type {string}
      * @memberof OrderReportFulfillmentErrorRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderReportFulfillmentErrorRequest
      */
-    'fulfillmentId'?: string;
+    'fulfillmentId': string;
 }
 /**
  * 
@@ -2709,13 +2942,13 @@ export interface OrderReportFulfillmentNotResolvableRequest {
      * @type {string}
      * @memberof OrderReportFulfillmentNotResolvableRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderReportFulfillmentNotResolvableRequest
      */
-    'fulfillmentId'?: string;
+    'fulfillmentId': string;
 }
 /**
  * 
@@ -2728,13 +2961,13 @@ export interface OrderReportFulfillmentReadyRequest {
      * @type {string}
      * @memberof OrderReportFulfillmentReadyRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderReportFulfillmentReadyRequest
      */
-    'fulfillmentId'?: string;
+    'fulfillmentId': string;
 }
 /**
  * 
@@ -2747,13 +2980,13 @@ export interface OrderReportShipmentDeliveryRequest {
      * @type {string}
      * @memberof OrderReportShipmentDeliveryRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderReportShipmentDeliveryRequest
      */
-    'shipmentId'?: string;
+    'shipmentId': string;
 }
 /**
  * 
@@ -2766,13 +2999,13 @@ export interface OrderReportShipmentMissingStockRequest {
      * @type {string}
      * @memberof OrderReportShipmentMissingStockRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderReportShipmentMissingStockRequest
      */
-    'shipmentId'?: string;
+    'shipmentId': string;
     /**
      * 
      * @type {string}
@@ -2791,13 +3024,13 @@ export interface OrderResolveShipmentMissingStockRequest {
      * @type {string}
      * @memberof OrderResolveShipmentMissingStockRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderResolveShipmentMissingStockRequest
      */
-    'shipmentId'?: string;
+    'shipmentId': string;
 }
 /**
  * 
@@ -2810,13 +3043,13 @@ export interface OrderRetryFulfillmentRequest {
      * @type {string}
      * @memberof OrderRetryFulfillmentRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderRetryFulfillmentRequest
      */
-    'fulfillmentId'?: string;
+    'fulfillmentId': string;
 }
 /**
  * 
@@ -2829,7 +3062,7 @@ export interface OrderSearchOrdersRequest {
      * @type {string}
      * @memberof OrderSearchOrdersRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
@@ -2878,6 +3111,12 @@ export interface OrderSearchOrdersRequest {
      * @memberof OrderSearchOrdersRequest
      */
     'paymentFilter'?: OrderPaymentFilter;
+    /**
+     * 
+     * @type {string}
+     * @memberof OrderSearchOrdersRequest
+     */
+    'agentGrn'?: string;
 }
 /**
  * 
@@ -2909,13 +3148,13 @@ export interface OrderSendFulfillmentRequest {
      * @type {string}
      * @memberof OrderSendFulfillmentRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderSendFulfillmentRequest
      */
-    'fulfillmentId'?: string;
+    'fulfillmentId': string;
 }
 /**
  * 
@@ -3045,13 +3284,13 @@ export interface OrderStartFulfillmentProcessingRequest {
      * @type {string}
      * @memberof OrderStartFulfillmentProcessingRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderStartFulfillmentProcessingRequest
      */
-    'fulfillmentId'?: string;
+    'fulfillmentId': string;
 }
 /**
  * 
@@ -3064,13 +3303,13 @@ export interface OrderStartShipmentProcessingRequest {
      * @type {string}
      * @memberof OrderStartShipmentProcessingRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderStartShipmentProcessingRequest
      */
-    'shipmentId'?: string;
+    'shipmentId': string;
 }
 /**
  * 
@@ -3184,13 +3423,13 @@ export interface OrderUnholdOrderRequest {
      * @type {string}
      * @memberof OrderUnholdOrderRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderUnholdOrderRequest
      */
-    'orderId'?: string;
+    'orderId': string;
 }
 /**
  * 
@@ -3203,13 +3442,13 @@ export interface OrderUpdateOrderRequest {
      * @type {string}
      * @memberof OrderUpdateOrderRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderUpdateOrderRequest
      */
-    'id'?: string;
+    'id': string;
     /**
      * 
      * @type {UpdateOrderRequestPayload}
@@ -3218,10 +3457,10 @@ export interface OrderUpdateOrderRequest {
     'payload'?: UpdateOrderRequestPayload;
     /**
      * 
-     * @type {Array<string>}
+     * @type {string}
      * @memberof OrderUpdateOrderRequest
      */
-    'fieldMask'?: Array<string>;
+    'fieldMask'?: string;
 }
 /**
  * 
@@ -3234,13 +3473,13 @@ export interface OrderUpdatePaymentRequest {
      * @type {string}
      * @memberof OrderUpdatePaymentRequest
      */
-    'tenantId'?: string;
+    'tenantId': string;
     /**
      * 
      * @type {string}
      * @memberof OrderUpdatePaymentRequest
      */
-    'paymentId'?: string;
+    'paymentId': string;
     /**
      * 
      * @type {PaymentCcInfo}
@@ -3297,7 +3536,7 @@ export interface PaymentCcInfo {
      */
     'avsStatus'?: string;
     /**
-     * 
+     * card type MasterCard, Visa..
      * @type {string}
      * @memberof PaymentCcInfo
      */
@@ -3331,21 +3570,66 @@ export interface PrintOrdersLabelsResponseFailedOrder {
 /**
  * 
  * @export
+ * @interface ProductConfigurationStepOption
+ */
+export interface ProductConfigurationStepOption {
+    /**
+     * 
+     * @type {string}
+     * @memberof ProductConfigurationStepOption
+     */
+    'id'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ProductConfigurationStepOption
+     */
+    'grn'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof ProductConfigurationStepOption
+     */
+    'label'?: string;
+    /**
+     * 
+     * @type {OrderMoney}
+     * @memberof ProductConfigurationStepOption
+     */
+    'priceVariation'?: OrderMoney;
+    /**
+     * 
+     * @type {OptionImage}
+     * @memberof ProductConfigurationStepOption
+     */
+    'image'?: OptionImage;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof ProductConfigurationStepOption
+     */
+    'hasQuantity'?: boolean;
+    /**
+     * 
+     * @type {number}
+     * @memberof ProductConfigurationStepOption
+     */
+    'quantity'?: number;
+}
+/**
+ * 
+ * @export
  * @interface ProtobufAny
  */
 export interface ProtobufAny {
+    [key: string]: any;
+
     /**
      * 
      * @type {string}
      * @memberof ProtobufAny
      */
     '@type'?: string;
-    /**
-     * 
-     * @type {string}
-     * @memberof ProtobufAny
-     */
-    'value'?: string;
 }
 /**
  * `NullValue` is a singleton enumeration to represent the null value for the `Value` type union.   The JSON representation for `NullValue` is JSON `null`.   - NULL_VALUE: Null value.
@@ -3476,6 +3760,9 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
 
     
             localVarHeaderParameter['Content-Type'] = 'application/json';
@@ -3511,6 +3798,9 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
 
 
     
@@ -3548,6 +3838,9 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
 
     
             localVarHeaderParameter['Content-Type'] = 'application/json';
@@ -3583,6 +3876,9 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
 
 
     
@@ -3620,6 +3916,9 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
 
     
             localVarHeaderParameter['Content-Type'] = 'application/json';
@@ -3655,6 +3954,9 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
 
 
     
@@ -3692,6 +3994,9 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
 
     
             localVarHeaderParameter['Content-Type'] = 'application/json';
@@ -3727,6 +4032,9 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
 
 
     
@@ -3764,6 +4072,9 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
 
     
             localVarHeaderParameter['Content-Type'] = 'application/json';
@@ -3799,6 +4110,9 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
 
 
     
@@ -3836,6 +4150,9 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
 
     
             localVarHeaderParameter['Content-Type'] = 'application/json';
@@ -3871,6 +4188,9 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
 
 
     
@@ -3908,6 +4228,9 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
 
     
             localVarHeaderParameter['Content-Type'] = 'application/json';
@@ -3943,6 +4266,9 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
 
 
     
@@ -3980,6 +4306,9 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
 
     
             localVarHeaderParameter['Content-Type'] = 'application/json';
@@ -4015,6 +4344,9 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
 
 
     
@@ -4052,6 +4384,9 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
 
     
             localVarHeaderParameter['Content-Type'] = 'application/json';
@@ -4087,6 +4422,9 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
 
 
     
@@ -4124,6 +4462,9 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
 
     
             localVarHeaderParameter['Content-Type'] = 'application/json';
@@ -4159,6 +4500,9 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
 
 
     
@@ -4196,6 +4540,9 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
 
     
             localVarHeaderParameter['Content-Type'] = 'application/json';
@@ -4231,6 +4578,9 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
 
 
     
@@ -4268,6 +4618,9 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
 
     
             localVarHeaderParameter['Content-Type'] = 'application/json';
@@ -4303,6 +4656,9 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
 
 
     
@@ -4340,6 +4696,9 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
 
     
             localVarHeaderParameter['Content-Type'] = 'application/json';
@@ -4375,6 +4734,9 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
 
 
     
@@ -4412,6 +4774,9 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
 
     
             localVarHeaderParameter['Content-Type'] = 'application/json';
@@ -4447,6 +4812,9 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
 
 
     
@@ -4484,6 +4852,9 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
 
     
             localVarHeaderParameter['Content-Type'] = 'application/json';
@@ -4519,6 +4890,86 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @summary Documents
+         * @param {OrderAddDocumentRequest} body 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        orderAddDocument: async (body: OrderAddDocumentRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'body' is not null or undefined
+            assertParamExists('orderAddDocument', 'body', body)
+            const localVarPath = `/order.Order/AddDocument`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+
+            setSearchParams(localVarUrlObj, localVarQueryParameter);
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            localVarRequestOptions.data = serializeDataIfNeeded(body, localVarRequestOptions, configuration)
+
+            return {
+                url: toPathString(localVarUrlObj),
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * 
+         * @param {OrderRemoveDocumentByCodeRequest} body 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        orderRemoveDocumentByCode: async (body: OrderRemoveDocumentByCodeRequest, options: RawAxiosRequestConfig = {}): Promise<RequestArgs> => {
+            // verify required parameter 'body' is not null or undefined
+            assertParamExists('orderRemoveDocumentByCode', 'body', body)
+            const localVarPath = `/order.Order/RemoveDocumentByCode`;
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, DUMMY_BASE_URL);
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
 
 
     
@@ -4556,6 +5007,9 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
 
     
             localVarHeaderParameter['Content-Type'] = 'application/json';
@@ -4591,6 +5045,9 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
 
 
     
@@ -4628,6 +5085,9 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
 
     
             localVarHeaderParameter['Content-Type'] = 'application/json';
@@ -4663,6 +5123,9 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
 
 
     
@@ -4700,6 +5163,9 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
 
     
             localVarHeaderParameter['Content-Type'] = 'application/json';
@@ -4735,6 +5201,9 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
 
 
     
@@ -4772,6 +5241,9 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
 
     
             localVarHeaderParameter['Content-Type'] = 'application/json';
@@ -4807,6 +5279,9 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
 
 
     
@@ -4844,6 +5319,9 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
 
     
             localVarHeaderParameter['Content-Type'] = 'application/json';
@@ -4879,6 +5357,9 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
 
 
     
@@ -4916,6 +5397,9 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
 
     
             localVarHeaderParameter['Content-Type'] = 'application/json';
@@ -4951,6 +5435,9 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
 
 
     
@@ -4988,6 +5475,9 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
 
     
             localVarHeaderParameter['Content-Type'] = 'application/json';
@@ -5023,6 +5513,9 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
 
 
     
@@ -5060,6 +5553,9 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
 
     
             localVarHeaderParameter['Content-Type'] = 'application/json';
@@ -5095,6 +5591,9 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
 
 
     
@@ -5132,6 +5631,9 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
 
     
             localVarHeaderParameter['Content-Type'] = 'application/json';
@@ -5168,6 +5670,9 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
+
 
     
             localVarHeaderParameter['Content-Type'] = 'application/json';
@@ -5203,6 +5708,9 @@ export const OrderApiAxiosParamCreator = function (configuration?: Configuration
             const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
+
+            // authentication Authorization required
+            await setApiKeyToObject(localVarHeaderParameter, "Authorization", configuration)
 
 
     
@@ -5616,6 +6124,31 @@ export const OrderApiFp = function(configuration?: Configuration) {
             const localVarAxiosArgs = await localVarAxiosParamCreator.listShipments(body, options);
             const index = configuration?.serverIndex ?? 0;
             const operationBasePath = operationServerMap['OrderApi.listShipments']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+        },
+        /**
+         * 
+         * @summary Documents
+         * @param {OrderAddDocumentRequest} body 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async orderAddDocument(body: OrderAddDocumentRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.orderAddDocument(body, options);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['OrderApi.orderAddDocument']?.[index]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+        },
+        /**
+         * 
+         * @param {OrderRemoveDocumentByCodeRequest} body 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async orderRemoveDocumentByCode(body: OrderRemoveDocumentByCodeRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
+            const localVarAxiosArgs = await localVarAxiosParamCreator.orderRemoveDocumentByCode(body, options);
+            const index = configuration?.serverIndex ?? 0;
+            const operationBasePath = operationServerMap['OrderApi.orderRemoveDocumentByCode']?.[index]?.url;
             return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
         },
         /**
@@ -6177,6 +6710,25 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
         },
         /**
          * 
+         * @summary Documents
+         * @param {OrderAddDocumentRequest} body 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        orderAddDocument(body: OrderAddDocumentRequest, options?: any): AxiosPromise<object> {
+            return localVarFp.orderAddDocument(body, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
+         * @param {OrderRemoveDocumentByCodeRequest} body 
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        orderRemoveDocumentByCode(body: OrderRemoveDocumentByCodeRequest, options?: any): AxiosPromise<object> {
+            return localVarFp.orderRemoveDocumentByCode(body, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * 
          * @summary Print Orders Labels
          * @param {OrderPrintOrdersLabelsRequest} body 
          * @param {*} [options] Override http request option.
@@ -6733,6 +7285,29 @@ export class OrderApi extends BaseAPI {
      */
     public listShipments(body: OrderListShipmentsRequest, options?: RawAxiosRequestConfig) {
         return OrderApiFp(this.configuration).listShipments(body, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @summary Documents
+     * @param {OrderAddDocumentRequest} body 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof OrderApi
+     */
+    public orderAddDocument(body: OrderAddDocumentRequest, options?: RawAxiosRequestConfig) {
+        return OrderApiFp(this.configuration).orderAddDocument(body, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * 
+     * @param {OrderRemoveDocumentByCodeRequest} body 
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof OrderApi
+     */
+    public orderRemoveDocumentByCode(body: OrderRemoveDocumentByCodeRequest, options?: RawAxiosRequestConfig) {
+        return OrderApiFp(this.configuration).orderRemoveDocumentByCode(body, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
