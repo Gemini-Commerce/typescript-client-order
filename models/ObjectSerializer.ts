@@ -151,7 +151,7 @@ import { OrderGetPaymentRequest } from '../models/OrderGetPaymentRequest';
 import { OrderGetShipmentRequest } from '../models/OrderGetShipmentRequest';
 import { OrderGetTransactionRequest } from '../models/OrderGetTransactionRequest';
 import { OrderHoldOrderRequest } from '../models/OrderHoldOrderRequest';
-import { OrderImportOrderRequest                  } from '../models/OrderImportOrderRequest';
+import { OrderImportOrderRequest                   } from '../models/OrderImportOrderRequest';
 import { OrderListFulfillmentsRequest } from '../models/OrderListFulfillmentsRequest';
 import { OrderListFulfillmentsResponse } from '../models/OrderListFulfillmentsResponse';
 import { OrderListOrdersByCustomerRequest } from '../models/OrderListOrdersByCustomerRequest';
