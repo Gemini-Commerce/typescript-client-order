@@ -3123,6 +3123,18 @@ export interface OrderSearchOrdersRequest {
      * @memberof OrderSearchOrdersRequest
      */
     'agentGrn'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof OrderSearchOrdersRequest
+     */
+    'updatedFrom'?: string;
+    /**
+     * 
+     * @type {string}
+     * @memberof OrderSearchOrdersRequest
+     */
+    'updatedTo'?: string;
 }
 /**
  * 
