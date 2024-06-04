@@ -78,4 +78,16 @@ export interface OrderSearchOrdersRequest {
      * @memberof OrderSearchOrdersRequest
      */
     'agentGrn'?: string;
+    /**
+     * 
+     * @type {Date}
+     * @memberof OrderSearchOrdersRequest
+     */
+    'updatedFrom'?: Date;
+    /**
+     * 
+     * @type {Date}
+     * @memberof OrderSearchOrdersRequest
+     */
+    'updatedTo'?: Date;
 }
