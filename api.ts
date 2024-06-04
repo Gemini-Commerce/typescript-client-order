@@ -1804,6 +1804,12 @@ export interface OrderImportOrderRequest {
      * @memberof OrderImportOrderRequest
      */
     'currency': OrderCurrency;
+    /**
+     * 
+     * @type {boolean}
+     * @memberof OrderImportOrderRequest
+     */
+    'vatIncluded'?: boolean;
 }
 
 
