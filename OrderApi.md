@@ -2229,6 +2229,7 @@ let body:.OrderApiImportOrderRequest = {
     },
     status: "status_example",
     currency: "XXX",
+    vatIncluded: true,
   },
 };
 

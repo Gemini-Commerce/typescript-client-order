@@ -39,6 +39,7 @@ export class OrderImportOrderRequest {
     'totals': { [key: string]: OrderDataTotal; };
     'status': string;
     'currency': OrderCurrency;
+    'vatIncluded'?: boolean;
 
     static readonly discriminator: string | undefined = undefined;
 
@@ -143,6 +144,12 @@ export class OrderImportOrderRequest {
             "name": "currency",
             "baseName": "currency",
             "type": "OrderCurrency",
+            "format": ""
+        },
+        {
+            "name": "vatIncluded",
+            "baseName": "vatIncluded",
+            "type": "boolean",
             "format": ""
         }    ];
 
