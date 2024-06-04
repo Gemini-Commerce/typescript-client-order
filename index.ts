@@ -12,22 +12,7 @@
  * Do not edit the class manually.
  */
 
-/**
- * 
- * @export
- * @interface OrderAssignShipmentRequest
- */
-export interface OrderAssignShipmentRequest {
-    /**
-     * 
-     * @type {string}
-     * @memberof OrderAssignShipmentRequest
-     */
-    'tenantId': string;
-    /**
-     * 
-     * @type {string}
-     * @memberof OrderAssignShipmentRequest
-     */
-    'shipmentId': string;
-}
+
+export * from "./api";
+export * from "./configuration";
+
