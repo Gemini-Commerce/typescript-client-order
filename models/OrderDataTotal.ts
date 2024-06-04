@@ -15,8 +15,8 @@ import { OrderMoney } from '../models/OrderMoney';
 import { HttpFile } from '../http/http';
 
 export class OrderDataTotal {
-    'code'?: OrderDataTotalCode;
-    'value'?: OrderMoney;
+    'code': OrderDataTotalCode;
+    'value': OrderMoney;
 
     static readonly discriminator: string | undefined = undefined;
 

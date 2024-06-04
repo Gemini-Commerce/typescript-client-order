@@ -12,6 +12,7 @@
 
 import { OrderCurrency } from '../models/OrderCurrency';
 import { OrderDataCustomerInfo } from '../models/OrderDataCustomerInfo';
+import { OrderDataDocument } from '../models/OrderDataDocument';
 import { OrderDataHistory } from '../models/OrderDataHistory';
 import { OrderDataPaymentInfo } from '../models/OrderDataPaymentInfo';
 import { OrderDataPromotionInfo } from '../models/OrderDataPromotionInfo';
@@ -34,8 +35,9 @@ export class OrderOrderData {
     'status'?: string;
     'channel'?: string;
     'market'?: string;
-    'locale'?: string;
+    'locale': string;
     'additionalInfo'?: any;
+    'documents'?: Array<OrderDataDocument>;
     'items'?: Array<OrderOrderDataItem>;
     'payments'?: Array<OrderPayment>;
     'shipments'?: Array<OrderShipment>;
@@ -125,6 +127,12 @@ export class OrderOrderData {
             "name": "additionalInfo",
             "baseName": "additionalInfo",
             "type": "any",
+            "format": ""
+        },
+        {
+            "name": "documents",
+            "baseName": "documents",
+            "type": "Array<OrderDataDocument>",
             "format": ""
         },
         {

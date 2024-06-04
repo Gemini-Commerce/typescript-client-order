@@ -15,10 +15,10 @@ import { OrderRefundItem } from '../models/OrderRefundItem';
 import { HttpFile } from '../http/http';
 
 export class OrderCreateRefundRequest {
-    'tenantId'?: string;
-    'paymentId'?: string;
+    'tenantId': string;
+    'paymentId': string;
     'items'?: Array<OrderRefundItem>;
-    'amounts'?: Array<OrderRefundAmount>;
+    'amounts': Array<OrderRefundAmount>;
     'note'?: string;
     'additionalInfo'?: string;
 

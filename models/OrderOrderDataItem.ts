@@ -10,6 +10,7 @@
  * Do not edit the class manually.
  */
 
+import { ItemProductConfigurationStep } from '../models/ItemProductConfigurationStep';
 import { OrderMoney } from '../models/OrderMoney';
 import { HttpFile } from '../http/http';
 
@@ -27,6 +28,8 @@ export class OrderOrderDataItem {
     'rowVatAmount'?: OrderMoney;
     'discountAmount'?: OrderMoney;
     'rowBasePrice'?: OrderMoney;
+    'unitCustomPrice'?: OrderMoney;
+    'rowCustomPrice'?: OrderMoney;
     'vatPercentage'?: number;
     'vatInaccurate'?: boolean;
     'vatCalculated'?: boolean;
@@ -39,6 +42,7 @@ export class OrderOrderDataItem {
     'shipmentInfoReference'?: string;
     'promotionGrn'?: Array<string>;
     'productIsVirtual'?: boolean;
+    'productConfiguration'?: Array<ItemProductConfigurationStep>;
 
     static readonly discriminator: string | undefined = undefined;
 
@@ -122,6 +126,18 @@ export class OrderOrderDataItem {
             "format": ""
         },
         {
+            "name": "unitCustomPrice",
+            "baseName": "unitCustomPrice",
+            "type": "OrderMoney",
+            "format": ""
+        },
+        {
+            "name": "rowCustomPrice",
+            "baseName": "rowCustomPrice",
+            "type": "OrderMoney",
+            "format": ""
+        },
+        {
             "name": "vatPercentage",
             "baseName": "vatPercentage",
             "type": "number",
@@ -191,6 +207,12 @@ export class OrderOrderDataItem {
             "name": "productIsVirtual",
             "baseName": "productIsVirtual",
             "type": "boolean",
+            "format": ""
+        },
+        {
+            "name": "productConfiguration",
+            "baseName": "productConfiguration",
+            "type": "Array<ItemProductConfigurationStep>",
             "format": ""
         }    ];
 

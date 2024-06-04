@@ -14,9 +14,9 @@ import { OrderTransactionType } from '../models/OrderTransactionType';
 import { HttpFile } from '../http/http';
 
 export class OrderCreatePaymentTransactionRequest {
-    'tenantId'?: string;
-    'paymentId'?: string;
-    'type'?: OrderTransactionType;
+    'tenantId': string;
+    'paymentId': string;
+    'type': OrderTransactionType;
     'additionalInfo'?: string;
 
     static readonly discriminator: string | undefined = undefined;

@@ -10,54 +10,67 @@
  * Do not edit the class manually.
  */
 
-import { InitialPaymentInitialTransaction } from '../models/InitialPaymentInitialTransaction';
+import { OptionImage } from '../models/OptionImage';
 import { OrderMoney } from '../models/OrderMoney';
-import { PaymentCcInfo } from '../models/PaymentCcInfo';
 import { HttpFile } from '../http/http';
 
-export class CreateOrderRequestInitialPayment {
-    'code': string;
-    'additionalInfo'?: string;
-    'amount': OrderMoney;
-    'ccInfo'?: PaymentCcInfo;
-    'transaction'?: InitialPaymentInitialTransaction;
+export class ProductConfigurationStepOption {
+    'id'?: string;
+    'grn'?: string;
+    'label'?: string;
+    'priceVariation'?: OrderMoney;
+    'image'?: OptionImage;
+    'hasQuantity'?: boolean;
+    'quantity'?: number;
 
     static readonly discriminator: string | undefined = undefined;
 
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
-            "name": "code",
-            "baseName": "code",
+            "name": "id",
+            "baseName": "id",
             "type": "string",
             "format": ""
         },
         {
-            "name": "additionalInfo",
-            "baseName": "additionalInfo",
+            "name": "grn",
+            "baseName": "grn",
             "type": "string",
             "format": ""
         },
         {
-            "name": "amount",
-            "baseName": "amount",
+            "name": "label",
+            "baseName": "label",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "priceVariation",
+            "baseName": "priceVariation",
             "type": "OrderMoney",
             "format": ""
         },
         {
-            "name": "ccInfo",
-            "baseName": "ccInfo",
-            "type": "PaymentCcInfo",
+            "name": "image",
+            "baseName": "image",
+            "type": "OptionImage",
             "format": ""
         },
         {
-            "name": "transaction",
-            "baseName": "transaction",
-            "type": "InitialPaymentInitialTransaction",
+            "name": "hasQuantity",
+            "baseName": "hasQuantity",
+            "type": "boolean",
             "format": ""
+        },
+        {
+            "name": "quantity",
+            "baseName": "quantity",
+            "type": "number",
+            "format": "int64"
         }    ];
 
     static getAttributeTypeMap() {
-        return CreateOrderRequestInitialPayment.attributeTypeMap;
+        return ProductConfigurationStepOption.attributeTypeMap;
     }
 
     public constructor() {

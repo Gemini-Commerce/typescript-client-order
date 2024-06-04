@@ -15,10 +15,11 @@ import { PaymentCcInfo } from '../models/PaymentCcInfo';
 import { HttpFile } from '../http/http';
 
 export class ImportOrderRequestImportedPayment {
-    'code'?: string;
+    'code': string;
     'additionalInfo'?: string;
-    'amounts'?: Array<OrderPaymentAmount>;
+    'amounts': Array<OrderPaymentAmount>;
     'ccInfo'?: PaymentCcInfo;
+    'isUpfront'?: boolean;
 
     static readonly discriminator: string | undefined = undefined;
 
@@ -45,6 +46,12 @@ export class ImportOrderRequestImportedPayment {
             "name": "ccInfo",
             "baseName": "ccInfo",
             "type": "PaymentCcInfo",
+            "format": ""
+        },
+        {
+            "name": "isUpfront",
+            "baseName": "isUpfront",
+            "type": "boolean",
             "format": ""
         }    ];
 

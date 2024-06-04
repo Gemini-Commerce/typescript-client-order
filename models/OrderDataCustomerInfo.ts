@@ -14,14 +14,18 @@ import { HttpFile } from '../http/http';
 
 export class OrderDataCustomerInfo {
     'grn'?: string;
-    'firstname'?: string;
-    'lastname'?: string;
-    'email'?: string;
+    'firstname': string;
+    'lastname': string;
+    'email': string;
     'phone'?: string;
     'segment'?: string;
     'data'?: string;
     'certifiedEmail'?: string;
     'taxCode'?: string;
+    'sdiCode'?: string;
+    'fiscalCode'?: string;
+    'companyName'?: string;
+    'agentGrn'?: string;
 
     static readonly discriminator: string | undefined = undefined;
 
@@ -77,6 +81,30 @@ export class OrderDataCustomerInfo {
         {
             "name": "taxCode",
             "baseName": "taxCode",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "sdiCode",
+            "baseName": "sdiCode",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "fiscalCode",
+            "baseName": "fiscalCode",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "companyName",
+            "baseName": "companyName",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "agentGrn",
+            "baseName": "agentGrn",
             "type": "string",
             "format": ""
         }    ];

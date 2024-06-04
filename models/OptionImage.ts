@@ -12,28 +12,28 @@
 
 import { HttpFile } from '../http/http';
 
-export class OrderPrintOrdersLabelsRequest {
-    'tenantId': string;
-    'orderNumbers': Array<string>;
+export class OptionImage {
+    'grn'?: string;
+    'url'?: string;
 
     static readonly discriminator: string | undefined = undefined;
 
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
-            "name": "tenantId",
-            "baseName": "tenantId",
+            "name": "grn",
+            "baseName": "grn",
             "type": "string",
             "format": ""
         },
         {
-            "name": "orderNumbers",
-            "baseName": "orderNumbers",
-            "type": "Array<string>",
+            "name": "url",
+            "baseName": "url",
+            "type": "string",
             "format": ""
         }    ];
 
     static getAttributeTypeMap() {
-        return OrderPrintOrdersLabelsRequest.attributeTypeMap;
+        return OptionImage.attributeTypeMap;
     }
 
     public constructor() {

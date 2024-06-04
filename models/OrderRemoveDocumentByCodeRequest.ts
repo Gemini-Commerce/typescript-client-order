@@ -12,9 +12,10 @@
 
 import { HttpFile } from '../http/http';
 
-export class OrderPrintOrdersLabelsRequest {
+export class OrderRemoveDocumentByCodeRequest {
     'tenantId': string;
-    'orderNumbers': Array<string>;
+    'orderId': string;
+    'code': string;
 
     static readonly discriminator: string | undefined = undefined;
 
@@ -26,14 +27,20 @@ export class OrderPrintOrdersLabelsRequest {
             "format": ""
         },
         {
-            "name": "orderNumbers",
-            "baseName": "orderNumbers",
-            "type": "Array<string>",
+            "name": "orderId",
+            "baseName": "orderId",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "code",
+            "baseName": "code",
+            "type": "string",
             "format": ""
         }    ];
 
     static getAttributeTypeMap() {
-        return OrderPrintOrdersLabelsRequest.attributeTypeMap;
+        return OrderRemoveDocumentByCodeRequest.attributeTypeMap;
     }
 
     public constructor() {
