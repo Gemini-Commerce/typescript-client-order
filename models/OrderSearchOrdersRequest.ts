@@ -32,6 +32,8 @@ export class OrderSearchOrdersRequest {
     'toDate'?: Date;
     'paymentFilter'?: OrderPaymentFilter;
     'agentGrn'?: string;
+    'updatedFrom'?: Date;
+    'updatedTo'?: Date;
 
     static readonly discriminator: string | undefined = undefined;
 
@@ -95,6 +97,18 @@ export class OrderSearchOrdersRequest {
             "baseName": "agentGrn",
             "type": "string",
             "format": ""
+        },
+        {
+            "name": "updatedFrom",
+            "baseName": "updatedFrom",
+            "type": "Date",
+            "format": "date-time"
+        },
+        {
+            "name": "updatedTo",
+            "baseName": "updatedTo",
+            "type": "Date",
+            "format": "date-time"
         }    ];
 
     static getAttributeTypeMap() {
