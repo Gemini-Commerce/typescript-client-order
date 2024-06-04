@@ -83,11 +83,11 @@ export interface OrderSearchOrdersRequest {
      * @type {Date}
      * @memberof OrderSearchOrdersRequest
      */
-    'updatedFrom'?: Date;
+    'updatedAtFrom'?: Date;
     /**
      * 
      * @type {Date}
      * @memberof OrderSearchOrdersRequest
      */
-    'updatedTo'?: Date;
+    'updatedAtTo'?: Date;
 }
