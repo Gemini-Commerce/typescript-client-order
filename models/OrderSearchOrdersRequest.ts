@@ -32,8 +32,8 @@ export class OrderSearchOrdersRequest {
     'toDate'?: Date;
     'paymentFilter'?: OrderPaymentFilter;
     'agentGrn'?: string;
-    'updatedFrom'?: Date;
-    'updatedTo'?: Date;
+    'updatedAtFrom'?: Date;
+    'updatedAtTo'?: Date;
 
     static readonly discriminator: string | undefined = undefined;
 
@@ -99,14 +99,14 @@ export class OrderSearchOrdersRequest {
             "format": ""
         },
         {
-            "name": "updatedFrom",
-            "baseName": "updatedFrom",
+            "name": "updatedAtFrom",
+            "baseName": "updatedAtFrom",
             "type": "Date",
             "format": "date-time"
         },
         {
-            "name": "updatedTo",
-            "baseName": "updatedTo",
+            "name": "updatedAtTo",
+            "baseName": "updatedAtTo",
             "type": "Date",
             "format": "date-time"
         }    ];
