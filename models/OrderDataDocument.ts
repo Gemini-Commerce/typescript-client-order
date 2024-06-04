@@ -12,28 +12,49 @@
 
 import { HttpFile } from '../http/http';
 
-export class OrderPrintOrdersLabelsRequest {
-    'tenantId': string;
-    'orderNumbers': Array<string>;
+export class OrderDataDocument {
+    'code'?: string;
+    'label'?: string;
+    'assetGrn'?: string;
+    'url'?: string;
+    'insertedAt'?: Date;
 
     static readonly discriminator: string | undefined = undefined;
 
     static readonly attributeTypeMap: Array<{name: string, baseName: string, type: string, format: string}> = [
         {
-            "name": "tenantId",
-            "baseName": "tenantId",
+            "name": "code",
+            "baseName": "code",
             "type": "string",
             "format": ""
         },
         {
-            "name": "orderNumbers",
-            "baseName": "orderNumbers",
-            "type": "Array<string>",
+            "name": "label",
+            "baseName": "label",
+            "type": "string",
             "format": ""
+        },
+        {
+            "name": "assetGrn",
+            "baseName": "assetGrn",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "url",
+            "baseName": "url",
+            "type": "string",
+            "format": ""
+        },
+        {
+            "name": "insertedAt",
+            "baseName": "insertedAt",
+            "type": "Date",
+            "format": "date-time"
         }    ];
 
     static getAttributeTypeMap() {
-        return OrderPrintOrdersLabelsRequest.attributeTypeMap;
+        return OrderDataDocument.attributeTypeMap;
     }
 
     public constructor() {

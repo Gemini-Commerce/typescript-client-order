@@ -14,8 +14,8 @@ import { OrderRefundItem } from '../models/OrderRefundItem';
 import { HttpFile } from '../http/http';
 
 export class OrderCalculateRefundRequest {
-    'tenantId'?: string;
-    'paymentId'?: string;
+    'tenantId': string;
+    'paymentId': string;
     'items'?: Array<OrderRefundItem>;
     /**
     * Boolean indicating whether to calculate refund for shipping.

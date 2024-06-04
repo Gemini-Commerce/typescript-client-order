@@ -4,6 +4,9 @@ import { Configuration} from '../configuration'
 import { CreateOrderRequestInitialPayment } from '../models/CreateOrderRequestInitialPayment';
 import { ImportOrderRequestImportedPayment } from '../models/ImportOrderRequestImportedPayment';
 import { InitialPaymentInitialTransaction } from '../models/InitialPaymentInitialTransaction';
+import { ItemProductConfigurationStep } from '../models/ItemProductConfigurationStep';
+import { OptionImage } from '../models/OptionImage';
+import { OrderAddDocumentRequest } from '../models/OrderAddDocumentRequest';
 import { OrderApproveOrderRequest } from '../models/OrderApproveOrderRequest';
 import { OrderAssignShipmentRequest } from '../models/OrderAssignShipmentRequest';
 import { OrderByDirection } from '../models/OrderByDirection';
@@ -23,6 +26,7 @@ import { OrderCreateRefundTransactionRequest } from '../models/OrderCreateRefund
 import { OrderCreateShipmentRequest } from '../models/OrderCreateShipmentRequest';
 import { OrderCurrency } from '../models/OrderCurrency';
 import { OrderDataCustomerInfo } from '../models/OrderDataCustomerInfo';
+import { OrderDataDocument } from '../models/OrderDataDocument';
 import { OrderDataHistory } from '../models/OrderDataHistory';
 import { OrderDataPaymentInfo } from '../models/OrderDataPaymentInfo';
 import { OrderDataPromotionInfo } from '../models/OrderDataPromotionInfo';
@@ -73,6 +77,7 @@ import { OrderRefund } from '../models/OrderRefund';
 import { OrderRefundAmount } from '../models/OrderRefundAmount';
 import { OrderRefundAmountCode } from '../models/OrderRefundAmountCode';
 import { OrderRefundItem } from '../models/OrderRefundItem';
+import { OrderRemoveDocumentByCodeRequest } from '../models/OrderRemoveDocumentByCodeRequest';
 import { OrderReportFulfillmentErrorRequest } from '../models/OrderReportFulfillmentErrorRequest';
 import { OrderReportFulfillmentNotResolvableRequest } from '../models/OrderReportFulfillmentNotResolvableRequest';
 import { OrderReportFulfillmentReadyRequest } from '../models/OrderReportFulfillmentReadyRequest';
@@ -97,6 +102,7 @@ import { OrderUpdateOrderRequest } from '../models/OrderUpdateOrderRequest';
 import { OrderUpdatePaymentRequest } from '../models/OrderUpdatePaymentRequest';
 import { PaymentCcInfo } from '../models/PaymentCcInfo';
 import { PrintOrdersLabelsResponseFailedOrder } from '../models/PrintOrdersLabelsResponseFailedOrder';
+import { ProductConfigurationStepOption } from '../models/ProductConfigurationStepOption';
 import { ProtobufAny } from '../models/ProtobufAny';
 import { ProtobufNullValue } from '../models/ProtobufNullValue';
 import { RpcStatus } from '../models/RpcStatus';
@@ -653,6 +659,40 @@ export class PromiseOrderApi {
      */
     public listShipments(body: OrderListShipmentsRequest, _options?: Configuration): Promise<OrderListShipmentsResponse> {
         const result = this.api.listShipments(body, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Documents
+     * @param body 
+     */
+    public orderAddDocumentWithHttpInfo(body: OrderAddDocumentRequest, _options?: Configuration): Promise<HttpInfo<any>> {
+        const result = this.api.orderAddDocumentWithHttpInfo(body, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * Documents
+     * @param body 
+     */
+    public orderAddDocument(body: OrderAddDocumentRequest, _options?: Configuration): Promise<any> {
+        const result = this.api.orderAddDocument(body, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * @param body 
+     */
+    public orderRemoveDocumentByCodeWithHttpInfo(body: OrderRemoveDocumentByCodeRequest, _options?: Configuration): Promise<HttpInfo<any>> {
+        const result = this.api.orderRemoveDocumentByCodeWithHttpInfo(body, _options);
+        return result.toPromise();
+    }
+
+    /**
+     * @param body 
+     */
+    public orderRemoveDocumentByCode(body: OrderRemoveDocumentByCodeRequest, _options?: Configuration): Promise<any> {
+        const result = this.api.orderRemoveDocumentByCode(body, _options);
         return result.toPromise();
     }
 

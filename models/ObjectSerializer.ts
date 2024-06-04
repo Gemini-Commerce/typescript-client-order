@@ -1,6 +1,9 @@
 export * from '../models/CreateOrderRequestInitialPayment';
 export * from '../models/ImportOrderRequestImportedPayment';
 export * from '../models/InitialPaymentInitialTransaction';
+export * from '../models/ItemProductConfigurationStep';
+export * from '../models/OptionImage';
+export * from '../models/OrderAddDocumentRequest';
 export * from '../models/OrderApproveOrderRequest';
 export * from '../models/OrderAssignShipmentRequest';
 export * from '../models/OrderByDirection';
@@ -20,6 +23,7 @@ export * from '../models/OrderCreateRefundTransactionRequest';
 export * from '../models/OrderCreateShipmentRequest';
 export * from '../models/OrderCurrency';
 export * from '../models/OrderDataCustomerInfo';
+export * from '../models/OrderDataDocument';
 export * from '../models/OrderDataHistory';
 export * from '../models/OrderDataPaymentInfo';
 export * from '../models/OrderDataPromotionInfo';
@@ -70,6 +74,7 @@ export * from '../models/OrderRefund';
 export * from '../models/OrderRefundAmount';
 export * from '../models/OrderRefundAmountCode';
 export * from '../models/OrderRefundItem';
+export * from '../models/OrderRemoveDocumentByCodeRequest';
 export * from '../models/OrderReportFulfillmentErrorRequest';
 export * from '../models/OrderReportFulfillmentNotResolvableRequest';
 export * from '../models/OrderReportFulfillmentReadyRequest';
@@ -94,6 +99,7 @@ export * from '../models/OrderUpdateOrderRequest';
 export * from '../models/OrderUpdatePaymentRequest';
 export * from '../models/PaymentCcInfo';
 export * from '../models/PrintOrdersLabelsResponseFailedOrder';
+export * from '../models/ProductConfigurationStepOption';
 export * from '../models/ProtobufAny';
 export * from '../models/ProtobufNullValue';
 export * from '../models/RpcStatus';
@@ -103,6 +109,9 @@ export * from '../models/UpdateOrderRequestPayload';
 import { CreateOrderRequestInitialPayment } from '../models/CreateOrderRequestInitialPayment';
 import { ImportOrderRequestImportedPayment } from '../models/ImportOrderRequestImportedPayment';
 import { InitialPaymentInitialTransaction   } from '../models/InitialPaymentInitialTransaction';
+import { ItemProductConfigurationStep } from '../models/ItemProductConfigurationStep';
+import { OptionImage } from '../models/OptionImage';
+import { OrderAddDocumentRequest } from '../models/OrderAddDocumentRequest';
 import { OrderApproveOrderRequest } from '../models/OrderApproveOrderRequest';
 import { OrderAssignShipmentRequest } from '../models/OrderAssignShipmentRequest';
 import { OrderByDirection } from '../models/OrderByDirection';
@@ -122,6 +131,7 @@ import { OrderCreateRefundTransactionRequest      } from '../models/OrderCreateR
 import { OrderCreateShipmentRequest } from '../models/OrderCreateShipmentRequest';
 import { OrderCurrency } from '../models/OrderCurrency';
 import { OrderDataCustomerInfo } from '../models/OrderDataCustomerInfo';
+import { OrderDataDocument } from '../models/OrderDataDocument';
 import { OrderDataHistory } from '../models/OrderDataHistory';
 import { OrderDataPaymentInfo } from '../models/OrderDataPaymentInfo';
 import { OrderDataPromotionInfo } from '../models/OrderDataPromotionInfo';
@@ -155,7 +165,7 @@ import { OrderListShipmentsResponse } from '../models/OrderListShipmentsResponse
 import { OrderLocalizedText } from '../models/OrderLocalizedText';
 import { OrderMoney } from '../models/OrderMoney';
 import { OrderOrderBy   } from '../models/OrderOrderBy';
-import { OrderOrderData                                } from '../models/OrderOrderData';
+import { OrderOrderData                                 } from '../models/OrderOrderData';
 import { OrderOrderDataItem } from '../models/OrderOrderDataItem';
 import { OrderPayment } from '../models/OrderPayment';
 import { OrderPaymentAmount   } from '../models/OrderPaymentAmount';
@@ -172,6 +182,7 @@ import { OrderRefund } from '../models/OrderRefund';
 import { OrderRefundAmount   } from '../models/OrderRefundAmount';
 import { OrderRefundAmountCode } from '../models/OrderRefundAmountCode';
 import { OrderRefundItem } from '../models/OrderRefundItem';
+import { OrderRemoveDocumentByCodeRequest } from '../models/OrderRemoveDocumentByCodeRequest';
 import { OrderReportFulfillmentErrorRequest } from '../models/OrderReportFulfillmentErrorRequest';
 import { OrderReportFulfillmentNotResolvableRequest } from '../models/OrderReportFulfillmentNotResolvableRequest';
 import { OrderReportFulfillmentReadyRequest } from '../models/OrderReportFulfillmentReadyRequest';
@@ -196,6 +207,7 @@ import { OrderUpdateOrderRequest } from '../models/OrderUpdateOrderRequest';
 import { OrderUpdatePaymentRequest } from '../models/OrderUpdatePaymentRequest';
 import { PaymentCcInfo } from '../models/PaymentCcInfo';
 import { PrintOrdersLabelsResponseFailedOrder } from '../models/PrintOrdersLabelsResponseFailedOrder';
+import { ProductConfigurationStepOption } from '../models/ProductConfigurationStepOption';
 import { ProtobufAny } from '../models/ProtobufAny';
 import { ProtobufNullValue } from '../models/ProtobufNullValue';
 import { RpcStatus } from '../models/RpcStatus';
@@ -231,6 +243,9 @@ let typeMap: {[index: string]: any} = {
     "CreateOrderRequestInitialPayment": CreateOrderRequestInitialPayment,
     "ImportOrderRequestImportedPayment": ImportOrderRequestImportedPayment,
     "InitialPaymentInitialTransaction": InitialPaymentInitialTransaction,
+    "ItemProductConfigurationStep": ItemProductConfigurationStep,
+    "OptionImage": OptionImage,
+    "OrderAddDocumentRequest": OrderAddDocumentRequest,
     "OrderApproveOrderRequest": OrderApproveOrderRequest,
     "OrderAssignShipmentRequest": OrderAssignShipmentRequest,
     "OrderCalculateRefundRequest": OrderCalculateRefundRequest,
@@ -248,6 +263,7 @@ let typeMap: {[index: string]: any} = {
     "OrderCreateRefundTransactionRequest": OrderCreateRefundTransactionRequest,
     "OrderCreateShipmentRequest": OrderCreateShipmentRequest,
     "OrderDataCustomerInfo": OrderDataCustomerInfo,
+    "OrderDataDocument": OrderDataDocument,
     "OrderDataHistory": OrderDataHistory,
     "OrderDataPaymentInfo": OrderDataPaymentInfo,
     "OrderDataPromotionInfo": OrderDataPromotionInfo,
@@ -293,6 +309,7 @@ let typeMap: {[index: string]: any} = {
     "OrderRefund": OrderRefund,
     "OrderRefundAmount": OrderRefundAmount,
     "OrderRefundItem": OrderRefundItem,
+    "OrderRemoveDocumentByCodeRequest": OrderRemoveDocumentByCodeRequest,
     "OrderReportFulfillmentErrorRequest": OrderReportFulfillmentErrorRequest,
     "OrderReportFulfillmentNotResolvableRequest": OrderReportFulfillmentNotResolvableRequest,
     "OrderReportFulfillmentReadyRequest": OrderReportFulfillmentReadyRequest,
@@ -315,6 +332,7 @@ let typeMap: {[index: string]: any} = {
     "OrderUpdatePaymentRequest": OrderUpdatePaymentRequest,
     "PaymentCcInfo": PaymentCcInfo,
     "PrintOrdersLabelsResponseFailedOrder": PrintOrdersLabelsResponseFailedOrder,
+    "ProductConfigurationStepOption": ProductConfigurationStepOption,
     "ProtobufAny": ProtobufAny,
     "RpcStatus": RpcStatus,
     "ShipmentTracking": ShipmentTracking,
