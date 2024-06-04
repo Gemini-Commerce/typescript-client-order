@@ -3128,13 +3128,13 @@ export interface OrderSearchOrdersRequest {
      * @type {string}
      * @memberof OrderSearchOrdersRequest
      */
-    'updatedFrom'?: string;
+    'updatedAtFrom'?: string;
     /**
      * 
      * @type {string}
      * @memberof OrderSearchOrdersRequest
      */
-    'updatedTo'?: string;
+    'updatedAtTo'?: string;
 }
 /**
  * 
