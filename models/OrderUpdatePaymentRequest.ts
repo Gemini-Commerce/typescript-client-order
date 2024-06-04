@@ -14,8 +14,8 @@ import { PaymentCcInfo } from '../models/PaymentCcInfo';
 import { HttpFile } from '../http/http';
 
 export class OrderUpdatePaymentRequest {
-    'tenantId': string;
-    'paymentId': string;
+    'tenantId'?: string;
+    'paymentId'?: string;
     'ccInfo'?: PaymentCcInfo;
 
     static readonly discriminator: string | undefined = undefined;

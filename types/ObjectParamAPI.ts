@@ -4,9 +4,6 @@ import { Configuration} from '../configuration'
 import { CreateOrderRequestInitialPayment } from '../models/CreateOrderRequestInitialPayment';
 import { ImportOrderRequestImportedPayment } from '../models/ImportOrderRequestImportedPayment';
 import { InitialPaymentInitialTransaction } from '../models/InitialPaymentInitialTransaction';
-import { ItemProductConfigurationStep } from '../models/ItemProductConfigurationStep';
-import { OptionImage } from '../models/OptionImage';
-import { OrderAddDocumentRequest } from '../models/OrderAddDocumentRequest';
 import { OrderApproveOrderRequest } from '../models/OrderApproveOrderRequest';
 import { OrderAssignShipmentRequest } from '../models/OrderAssignShipmentRequest';
 import { OrderByDirection } from '../models/OrderByDirection';
@@ -26,7 +23,6 @@ import { OrderCreateRefundTransactionRequest } from '../models/OrderCreateRefund
 import { OrderCreateShipmentRequest } from '../models/OrderCreateShipmentRequest';
 import { OrderCurrency } from '../models/OrderCurrency';
 import { OrderDataCustomerInfo } from '../models/OrderDataCustomerInfo';
-import { OrderDataDocument } from '../models/OrderDataDocument';
 import { OrderDataHistory } from '../models/OrderDataHistory';
 import { OrderDataPaymentInfo } from '../models/OrderDataPaymentInfo';
 import { OrderDataPromotionInfo } from '../models/OrderDataPromotionInfo';
@@ -77,7 +73,6 @@ import { OrderRefund } from '../models/OrderRefund';
 import { OrderRefundAmount } from '../models/OrderRefundAmount';
 import { OrderRefundAmountCode } from '../models/OrderRefundAmountCode';
 import { OrderRefundItem } from '../models/OrderRefundItem';
-import { OrderRemoveDocumentByCodeRequest } from '../models/OrderRemoveDocumentByCodeRequest';
 import { OrderReportFulfillmentErrorRequest } from '../models/OrderReportFulfillmentErrorRequest';
 import { OrderReportFulfillmentNotResolvableRequest } from '../models/OrderReportFulfillmentNotResolvableRequest';
 import { OrderReportFulfillmentReadyRequest } from '../models/OrderReportFulfillmentReadyRequest';
@@ -102,7 +97,6 @@ import { OrderUpdateOrderRequest } from '../models/OrderUpdateOrderRequest';
 import { OrderUpdatePaymentRequest } from '../models/OrderUpdatePaymentRequest';
 import { PaymentCcInfo } from '../models/PaymentCcInfo';
 import { PrintOrdersLabelsResponseFailedOrder } from '../models/PrintOrdersLabelsResponseFailedOrder';
-import { ProductConfigurationStepOption } from '../models/ProductConfigurationStepOption';
 import { ProtobufAny } from '../models/ProtobufAny';
 import { ProtobufNullValue } from '../models/ProtobufNullValue';
 import { RpcStatus } from '../models/RpcStatus';
@@ -380,24 +374,6 @@ export interface OrderApiListShipmentsRequest {
      * @memberof OrderApilistShipments
      */
     body: OrderListShipmentsRequest
-}
-
-export interface OrderApiOrderAddDocumentRequest {
-    /**
-     * 
-     * @type OrderAddDocumentRequest
-     * @memberof OrderApiorderAddDocument
-     */
-    body: OrderAddDocumentRequest
-}
-
-export interface OrderApiOrderRemoveDocumentByCodeRequest {
-    /**
-     * 
-     * @type OrderRemoveDocumentByCodeRequest
-     * @memberof OrderApiorderRemoveDocumentByCode
-     */
-    body: OrderRemoveDocumentByCodeRequest
 }
 
 export interface OrderApiPrintOrdersLabelsRequest {
@@ -1056,36 +1032,6 @@ export class ObjectOrderApi {
      */
     public listShipments(param: OrderApiListShipmentsRequest, options?: Configuration): Promise<OrderListShipmentsResponse> {
         return this.api.listShipments(param.body,  options).toPromise();
-    }
-
-    /**
-     * Documents
-     * @param param the request object
-     */
-    public orderAddDocumentWithHttpInfo(param: OrderApiOrderAddDocumentRequest, options?: Configuration): Promise<HttpInfo<any>> {
-        return this.api.orderAddDocumentWithHttpInfo(param.body,  options).toPromise();
-    }
-
-    /**
-     * Documents
-     * @param param the request object
-     */
-    public orderAddDocument(param: OrderApiOrderAddDocumentRequest, options?: Configuration): Promise<any> {
-        return this.api.orderAddDocument(param.body,  options).toPromise();
-    }
-
-    /**
-     * @param param the request object
-     */
-    public orderRemoveDocumentByCodeWithHttpInfo(param: OrderApiOrderRemoveDocumentByCodeRequest, options?: Configuration): Promise<HttpInfo<any>> {
-        return this.api.orderRemoveDocumentByCodeWithHttpInfo(param.body,  options).toPromise();
-    }
-
-    /**
-     * @param param the request object
-     */
-    public orderRemoveDocumentByCode(param: OrderApiOrderRemoveDocumentByCodeRequest, options?: Configuration): Promise<any> {
-        return this.api.orderRemoveDocumentByCode(param.body,  options).toPromise();
     }
 
     /**

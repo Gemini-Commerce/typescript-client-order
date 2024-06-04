@@ -15,9 +15,9 @@ import { OrderMoney } from '../models/OrderMoney';
 import { HttpFile } from '../http/http';
 
 export class OrderDataPaymentInfo {
-    'code': string;
+    'code'?: string;
     'additionalInfo'?: string;
-    'amount': OrderMoney;
+    'amount'?: OrderMoney;
     'fee'?: OrderMoney;
     'vatAmount'?: OrderMoney;
     'vatPercentage'?: number;

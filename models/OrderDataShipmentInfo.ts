@@ -15,12 +15,12 @@ import { OrderPostalAddress } from '../models/OrderPostalAddress';
 import { HttpFile } from '../http/http';
 
 export class OrderDataShipmentInfo {
-    'reference': string;
-    'code': string;
+    'reference'?: string;
+    'code'?: string;
     'method'?: string;
     'title'?: string;
     'additionalInfo'?: string;
-    'amount': OrderMoney;
+    'amount'?: OrderMoney;
     'fee'?: OrderMoney;
     'vatAmount'?: OrderMoney;
     'vatPercentage'?: number;

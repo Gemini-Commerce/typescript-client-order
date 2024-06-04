@@ -13,8 +13,8 @@
 import { HttpFile } from '../http/http';
 
 export class OrderCreateHistoryRequest {
-    'tenantId': string;
-    'orderId': string;
+    'tenantId'?: string;
+    'orderId'?: string;
     'comment'?: string;
 
     static readonly discriminator: string | undefined = undefined;

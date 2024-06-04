@@ -14,7 +14,7 @@ import { OrderTransactionType } from '../models/OrderTransactionType';
 import { HttpFile } from '../http/http';
 
 export class InitialPaymentInitialTransaction {
-    'type': OrderTransactionType;
+    'type'?: OrderTransactionType;
     'additionalInfo'?: string;
 
     static readonly discriminator: string | undefined = undefined;

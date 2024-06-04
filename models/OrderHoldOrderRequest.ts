@@ -14,7 +14,7 @@ import { HttpFile } from '../http/http';
 
 export class OrderHoldOrderRequest {
     'tenantId'?: string;
-    'orderId': string;
+    'orderId'?: string;
     'reason'?: string;
 
     static readonly discriminator: string | undefined = undefined;

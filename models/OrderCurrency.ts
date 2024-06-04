@@ -12,9 +12,6 @@
 
 import { HttpFile } from '../http/http';
 
-/**
-* Stands for Albania, not all ;-)
-*/
 export enum OrderCurrency {
     Xxx = 'XXX',
     All = 'ALL',

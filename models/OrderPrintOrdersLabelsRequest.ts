@@ -13,8 +13,8 @@
 import { HttpFile } from '../http/http';
 
 export class OrderPrintOrdersLabelsRequest {
-    'tenantId': string;
-    'orderNumbers': Array<string>;
+    'tenantId'?: string;
+    'orderNumbers'?: Array<string>;
 
     static readonly discriminator: string | undefined = undefined;
 

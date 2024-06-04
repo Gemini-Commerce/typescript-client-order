@@ -18,9 +18,6 @@ import { HttpFile } from '../http/http';
 export class OrderPayment {
     'orderId'?: string;
     'id'?: string;
-    /**
-    * payment type stripe, paypal..
-    */
     'code'?: string;
     'additionalInfo'?: string;
     'amounts'?: Array<OrderPaymentAmount>;

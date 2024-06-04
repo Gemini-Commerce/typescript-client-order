@@ -13,8 +13,8 @@
 import { HttpFile } from '../http/http';
 
 export class OrderCancelOrderRequest {
-    'tenantId': string;
-    'orderId': string;
+    'tenantId'?: string;
+    'orderId'?: string;
     'reason'?: string;
 
     static readonly discriminator: string | undefined = undefined;

@@ -14,8 +14,8 @@ import { OrderTransactionType } from '../models/OrderTransactionType';
 import { HttpFile } from '../http/http';
 
 export class OrderCreateRefundTransactionRequest {
-    'tenantId': string;
-    'refundId': string;
+    'tenantId'?: string;
+    'refundId'?: string;
     'parentTransactionId'?: string;
     'type'?: OrderTransactionType;
     'additionalInfo'?: string;

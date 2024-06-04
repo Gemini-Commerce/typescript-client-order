@@ -34,8 +34,6 @@ Method | HTTP request | Description
 [**listOrdersByCustomer**](OrderApi.md#listOrdersByCustomer) | **POST** /order.Order/ListOrdersByCustomer | List Orders by Customer
 [**listOrdersByNumbers**](OrderApi.md#listOrdersByNumbers) | **POST** /order.Order/ListOrdersByNumbers | List Orders by Numbers
 [**listShipments**](OrderApi.md#listShipments) | **POST** /order.Order/ListShipments | List Shipments
-[**orderAddDocument**](OrderApi.md#orderAddDocument) | **POST** /order.Order/AddDocument | Documents
-[**orderRemoveDocumentByCode**](OrderApi.md#orderRemoveDocumentByCode) | **POST** /order.Order/RemoveDocumentByCode | 
 [**printOrdersLabels**](OrderApi.md#printOrdersLabels) | **POST** /order.Order/PrintOrdersLabels | Print Orders Labels
 [**quashFulfillment**](OrderApi.md#quashFulfillment) | **POST** /order.Order/QuashFulfillment | Quash Fulfillment
 [**quashShipment**](OrderApi.md#quashShipment) | **POST** /order.Order/QuashShipment | Quash Shipment
@@ -98,7 +96,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -157,7 +155,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -223,7 +221,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -283,7 +281,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -343,7 +341,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -403,7 +401,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -462,7 +460,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -527,7 +525,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -609,14 +607,6 @@ let body:.OrderApiCreateOrderRequest = {
           units: "units_example",
           micros: 1,
         },
-        unitCustomPrice: {
-          units: "units_example",
-          micros: 1,
-        },
-        rowCustomPrice: {
-          units: "units_example",
-          micros: 1,
-        },
         vatPercentage: 3.14,
         vatInaccurate: true,
         vatCalculated: true,
@@ -631,31 +621,6 @@ let body:.OrderApiCreateOrderRequest = {
           "promotionGrn_example",
         ],
         productIsVirtual: true,
-        productConfiguration: [
-          {
-            id: "id_example",
-            grn: "grn_example",
-            label: "label_example",
-            description: "description_example",
-            options: [
-              {
-                id: "id_example",
-                grn: "grn_example",
-                label: "label_example",
-                priceVariation: {
-                  units: "units_example",
-                  micros: 1,
-                },
-                image: {
-                  grn: "grn_example",
-                  url: "url_example",
-                },
-                hasQuantity: true,
-                quantity: 1,
-              },
-            ],
-          },
-        ],
       },
     ],
     paymentsInfo: [
@@ -865,10 +830,6 @@ let body:.OrderApiCreateOrderRequest = {
       data: "data_example",
       certifiedEmail: "certifiedEmail_example",
       taxCode: "taxCode_example",
-      sdiCode: "sdiCode_example",
-      fiscalCode: "fiscalCode_example",
-      companyName: "companyName_example",
-      agentGrn: "agentGrn_example",
     },
     cartGrn: "cartGrn_example",
     onHold: true,
@@ -895,7 +856,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -955,7 +916,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -1030,7 +991,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -1091,7 +1052,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -1167,7 +1128,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -1229,7 +1190,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -1330,24 +1291,6 @@ let body:.OrderApiCreateShipmentRequest = {
       phoneNumber: "phoneNumber_example",
       additionalInfo: {},
     },
-    tracking: [
-      {
-        carrierCode: "carrierCode_example",
-        carrierTitle: "carrierTitle_example",
-        url: "url_example",
-        number: "number_example",
-        labelUrl: "labelUrl_example",
-      },
-    ],
-    returnTracking: [
-      {
-        carrierCode: "carrierCode_example",
-        carrierTitle: "carrierTitle_example",
-        url: "url_example",
-        number: "number_example",
-        labelUrl: "labelUrl_example",
-      },
-    ],
     code: "code_example",
     method: "method_example",
   },
@@ -1372,7 +1315,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -1431,7 +1374,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -1490,7 +1433,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -1549,7 +1492,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -1608,7 +1551,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -1667,7 +1610,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -1726,7 +1669,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -1785,7 +1728,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -1844,7 +1787,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -1904,7 +1847,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -1955,10 +1898,6 @@ let body:.OrderApiImportOrderRequest = {
       data: "data_example",
       certifiedEmail: "certifiedEmail_example",
       taxCode: "taxCode_example",
-      sdiCode: "sdiCode_example",
-      fiscalCode: "fiscalCode_example",
-      companyName: "companyName_example",
-      agentGrn: "agentGrn_example",
     },
     shippingAddress: {
       revision: 1,
@@ -2021,7 +1960,6 @@ let body:.OrderApiImportOrderRequest = {
           avsStatus: "avsStatus_example",
           type: "type_example",
         },
-        isUpfront: true,
       },
     ],
     paymentsInfo: [
@@ -2160,14 +2098,6 @@ let body:.OrderApiImportOrderRequest = {
           units: "units_example",
           micros: 1,
         },
-        unitCustomPrice: {
-          units: "units_example",
-          micros: 1,
-        },
-        rowCustomPrice: {
-          units: "units_example",
-          micros: 1,
-        },
         vatPercentage: 3.14,
         vatInaccurate: true,
         vatCalculated: true,
@@ -2182,31 +2112,6 @@ let body:.OrderApiImportOrderRequest = {
           "promotionGrn_example",
         ],
         productIsVirtual: true,
-        productConfiguration: [
-          {
-            id: "id_example",
-            grn: "grn_example",
-            label: "label_example",
-            description: "description_example",
-            options: [
-              {
-                id: "id_example",
-                grn: "grn_example",
-                label: "label_example",
-                priceVariation: {
-                  units: "units_example",
-                  micros: 1,
-                },
-                image: {
-                  grn: "grn_example",
-                  url: "url_example",
-                },
-                hasQuantity: true,
-                quantity: 1,
-              },
-            ],
-          },
-        ],
       },
     ],
     subtotals: {
@@ -2229,7 +2134,6 @@ let body:.OrderApiImportOrderRequest = {
     },
     status: "status_example",
     currency: "XXX",
-    vatIncluded: true,
   },
 };
 
@@ -2252,7 +2156,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -2311,7 +2215,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -2383,7 +2287,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -2422,12 +2326,6 @@ let body:.OrderApiListOrdersByCustomerRequest = {
     customerGrn: "customerGrn_example",
     pageSize: 1,
     pageToken: "pageToken_example",
-    orderBy: [
-      {
-        field: "field_example",
-        direction: "DEFAULT",
-      },
-    ],
   },
 };
 
@@ -2450,7 +2348,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -2513,7 +2411,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -2572,7 +2470,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -2586,125 +2484,6 @@ Name | Type | Description  | Notes
 **200** | OK |  -  |
 **401** | Unauthorized |  -  |
 **500** | An internal error occurred is thrown when an incompatible payload is sent |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **orderAddDocument**
-> any orderAddDocument(body)
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .OrderApi(configuration);
-
-let body:.OrderApiOrderAddDocumentRequest = {
-  // OrderAddDocumentRequest
-  body: {
-    tenantId: "tenantId_example",
-    orderId: "orderId_example",
-    code: "code_example",
-    label: "label_example",
-    assetGrn: "assetGrn_example",
-    url: "url_example",
-  },
-};
-
-apiInstance.orderAddDocument(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | **OrderAddDocumentRequest**|  |
-
-
-### Return type
-
-**any**
-
-### Authorization
-
-[Authorization](README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
-**0** | An unexpected error response. |  -  |
-
-[[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
-
-# **orderRemoveDocumentByCode**
-> any orderRemoveDocumentByCode(body)
-
-
-### Example
-
-
-```typescript
-import {  } from '';
-import * as fs from 'fs';
-
-const configuration = .createConfiguration();
-const apiInstance = new .OrderApi(configuration);
-
-let body:.OrderApiOrderRemoveDocumentByCodeRequest = {
-  // OrderRemoveDocumentByCodeRequest
-  body: {
-    tenantId: "tenantId_example",
-    orderId: "orderId_example",
-    code: "code_example",
-  },
-};
-
-apiInstance.orderRemoveDocumentByCode(body).then((data:any) => {
-  console.log('API called successfully. Returned data: ' + data);
-}).catch((error:any) => console.error(error));
-```
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | **OrderRemoveDocumentByCodeRequest**|  |
-
-
-### Return type
-
-**any**
-
-### Authorization
-
-[Authorization](README.md#Authorization)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** | A successful response. |  -  |
 **0** | An unexpected error response. |  -  |
 
 [[Back to top]](#) [[Back to API list]](README.md#documentation-for-api-endpoints) [[Back to Model list]](README.md#documentation-for-models) [[Back to README]](README.md)
@@ -2752,7 +2531,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -2812,7 +2591,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -2872,7 +2651,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -2931,7 +2710,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -2990,7 +2769,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -3049,7 +2828,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -3108,7 +2887,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -3167,7 +2946,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -3227,7 +3006,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -3286,7 +3065,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -3345,7 +3124,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -3404,9 +3183,6 @@ let body:.OrderApiSearchOrdersRequest = {
       ],
       condition: "IN",
     },
-    agentGrn: "agentGrn_example",
-    updatedAtFrom: new Date('1970-01-01T00:00:00.00Z'),
-    updatedAtTo: new Date('1970-01-01T00:00:00.00Z'),
   },
 };
 
@@ -3429,7 +3205,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -3488,7 +3264,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -3547,7 +3323,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -3606,7 +3382,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -3665,7 +3441,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -3724,7 +3500,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -3802,7 +3578,9 @@ let body:.OrderApiUpdateOrderRequest = {
       },
       additionalInfo: {},
     },
-    fieldMask: "fieldMask_example",
+    fieldMask: [
+      "fieldMask_example",
+    ],
   },
 };
 
@@ -3825,7 +3603,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 
@@ -3894,7 +3672,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Authorization](README.md#Authorization)
+No authorization required
 
 ### HTTP request headers
 

@@ -16,7 +16,7 @@ import { OrderStatusFilter } from '../models/OrderStatusFilter';
 import { HttpFile } from '../http/http';
 
 export class OrderSearchOrdersRequest {
-    'tenantId': string;
+    'tenantId'?: string;
     'searchQuery'?: string;
     /**
     * The maximum number of orders to return. The service may return fewer than this value. If unspecified, at most 10 orders will be returned. The maximum value is 100; values above 100 will be coerced to 100.
@@ -31,9 +31,6 @@ export class OrderSearchOrdersRequest {
     'fromDate'?: Date;
     'toDate'?: Date;
     'paymentFilter'?: OrderPaymentFilter;
-    'agentGrn'?: string;
-    'updatedAtFrom'?: Date;
-    'updatedAtTo'?: Date;
 
     static readonly discriminator: string | undefined = undefined;
 
@@ -91,24 +88,6 @@ export class OrderSearchOrdersRequest {
             "baseName": "paymentFilter",
             "type": "OrderPaymentFilter",
             "format": ""
-        },
-        {
-            "name": "agentGrn",
-            "baseName": "agentGrn",
-            "type": "string",
-            "format": ""
-        },
-        {
-            "name": "updatedAtFrom",
-            "baseName": "updatedAtFrom",
-            "type": "Date",
-            "format": "date-time"
-        },
-        {
-            "name": "updatedAtTo",
-            "baseName": "updatedAtTo",
-            "type": "Date",
-            "format": "date-time"
         }    ];
 
     static getAttributeTypeMap() {

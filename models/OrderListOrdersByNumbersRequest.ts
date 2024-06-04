@@ -13,8 +13,8 @@
 import { HttpFile } from '../http/http';
 
 export class OrderListOrdersByNumbersRequest {
-    'tenantId': string;
-    'numbers': Array<string>;
+    'tenantId'?: string;
+    'numbers'?: Array<string>;
     /**
     * The maximum number of orders to return. The service may return fewer than this value. If unspecified, at most 10 orders will be returned. The maximum value is 100; values above 100 will be coerced to 100.
     */

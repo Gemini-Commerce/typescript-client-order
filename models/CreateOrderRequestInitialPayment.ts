@@ -16,9 +16,9 @@ import { PaymentCcInfo } from '../models/PaymentCcInfo';
 import { HttpFile } from '../http/http';
 
 export class CreateOrderRequestInitialPayment {
-    'code': string;
+    'code'?: string;
     'additionalInfo'?: string;
-    'amount': OrderMoney;
+    'amount'?: OrderMoney;
     'ccInfo'?: PaymentCcInfo;
     'transaction'?: InitialPaymentInitialTransaction;
 

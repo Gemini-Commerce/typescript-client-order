@@ -13,8 +13,8 @@
 import { HttpFile } from '../http/http';
 
 export class OrderGetOrderByCartIdRequest {
-    'tenantId': string;
-    'cartId': string;
+    'tenantId'?: string;
+    'cartId'?: string;
 
     static readonly discriminator: string | undefined = undefined;
 

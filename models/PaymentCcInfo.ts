@@ -20,9 +20,6 @@ export class PaymentCcInfo {
     'numberEnc'?: string;
     'owner'?: string;
     'avsStatus'?: string;
-    /**
-    * card type MasterCard, Visa..
-    */
     'type'?: string;
 
     static readonly discriminator: string | undefined = undefined;

@@ -15,11 +15,11 @@ import { HttpFile } from '../http/http';
 
 export class OrderDataPromotionInfo {
     'promotionGrn'?: string;
-    'type': string;
+    'type'?: string;
     'additionalInfo'?: string;
-    'name': string;
+    'name'?: string;
     'description'?: string;
-    'amount': OrderMoney;
+    'amount'?: OrderMoney;
     'couponCode'?: string;
     'vatAmount'?: OrderMoney;
     'vatPercentage'?: number;

@@ -14,9 +14,9 @@ import { OrderFulfillmentItem } from '../models/OrderFulfillmentItem';
 import { HttpFile } from '../http/http';
 
 export class OrderCreateFulfillmentRequest {
-    'tenantId': string;
-    'orderId': string;
-    'items': Array<OrderFulfillmentItem>;
+    'tenantId'?: string;
+    'orderId'?: string;
+    'items'?: Array<OrderFulfillmentItem>;
 
     static readonly discriminator: string | undefined = undefined;
 

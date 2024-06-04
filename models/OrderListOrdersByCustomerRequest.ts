@@ -10,12 +10,11 @@
  * Do not edit the class manually.
  */
 
-import { OrderOrderBy } from '../models/OrderOrderBy';
 import { HttpFile } from '../http/http';
 
 export class OrderListOrdersByCustomerRequest {
-    'tenantId': string;
-    'customerGrn': string;
+    'tenantId'?: string;
+    'customerGrn'?: string;
     /**
     * The maximum number of orders to return. The service may return fewer than this value. If unspecified, at most 10 orders will be returned. The maximum value is 100; values above 100 will be coerced to 100.
     */
@@ -24,7 +23,6 @@ export class OrderListOrdersByCustomerRequest {
     * A page token, received from a previous `ListOrders` call. Provide this to retrieve the subsequent page.   When paginating, all other parameters provided to `ListOrders` must match the call that provided the page token.
     */
     'pageToken'?: string;
-    'orderBy'?: Array<OrderOrderBy>;
 
     static readonly discriminator: string | undefined = undefined;
 
@@ -51,12 +49,6 @@ export class OrderListOrdersByCustomerRequest {
             "name": "pageToken",
             "baseName": "pageToken",
             "type": "string",
-            "format": ""
-        },
-        {
-            "name": "orderBy",
-            "baseName": "orderBy",
-            "type": "Array<OrderOrderBy>",
             "format": ""
         }    ];
 

@@ -5,9 +5,6 @@ import {mergeMap, map} from  '../rxjsStub';
 import { CreateOrderRequestInitialPayment } from '../models/CreateOrderRequestInitialPayment';
 import { ImportOrderRequestImportedPayment } from '../models/ImportOrderRequestImportedPayment';
 import { InitialPaymentInitialTransaction } from '../models/InitialPaymentInitialTransaction';
-import { ItemProductConfigurationStep } from '../models/ItemProductConfigurationStep';
-import { OptionImage } from '../models/OptionImage';
-import { OrderAddDocumentRequest } from '../models/OrderAddDocumentRequest';
 import { OrderApproveOrderRequest } from '../models/OrderApproveOrderRequest';
 import { OrderAssignShipmentRequest } from '../models/OrderAssignShipmentRequest';
 import { OrderByDirection } from '../models/OrderByDirection';
@@ -27,7 +24,6 @@ import { OrderCreateRefundTransactionRequest } from '../models/OrderCreateRefund
 import { OrderCreateShipmentRequest } from '../models/OrderCreateShipmentRequest';
 import { OrderCurrency } from '../models/OrderCurrency';
 import { OrderDataCustomerInfo } from '../models/OrderDataCustomerInfo';
-import { OrderDataDocument } from '../models/OrderDataDocument';
 import { OrderDataHistory } from '../models/OrderDataHistory';
 import { OrderDataPaymentInfo } from '../models/OrderDataPaymentInfo';
 import { OrderDataPromotionInfo } from '../models/OrderDataPromotionInfo';
@@ -78,7 +74,6 @@ import { OrderRefund } from '../models/OrderRefund';
 import { OrderRefundAmount } from '../models/OrderRefundAmount';
 import { OrderRefundAmountCode } from '../models/OrderRefundAmountCode';
 import { OrderRefundItem } from '../models/OrderRefundItem';
-import { OrderRemoveDocumentByCodeRequest } from '../models/OrderRemoveDocumentByCodeRequest';
 import { OrderReportFulfillmentErrorRequest } from '../models/OrderReportFulfillmentErrorRequest';
 import { OrderReportFulfillmentNotResolvableRequest } from '../models/OrderReportFulfillmentNotResolvableRequest';
 import { OrderReportFulfillmentReadyRequest } from '../models/OrderReportFulfillmentReadyRequest';
@@ -103,7 +98,6 @@ import { OrderUpdateOrderRequest } from '../models/OrderUpdateOrderRequest';
 import { OrderUpdatePaymentRequest } from '../models/OrderUpdatePaymentRequest';
 import { PaymentCcInfo } from '../models/PaymentCcInfo';
 import { PrintOrdersLabelsResponseFailedOrder } from '../models/PrintOrdersLabelsResponseFailedOrder';
-import { ProductConfigurationStepOption } from '../models/ProductConfigurationStepOption';
 import { ProtobufAny } from '../models/ProtobufAny';
 import { ProtobufNullValue } from '../models/ProtobufNullValue';
 import { RpcStatus } from '../models/RpcStatus';
@@ -1054,66 +1048,6 @@ export class ObservableOrderApi {
      */
     public listShipments(body: OrderListShipmentsRequest, _options?: Configuration): Observable<OrderListShipmentsResponse> {
         return this.listShipmentsWithHttpInfo(body, _options).pipe(map((apiResponse: HttpInfo<OrderListShipmentsResponse>) => apiResponse.data));
-    }
-
-    /**
-     * Documents
-     * @param body 
-     */
-    public orderAddDocumentWithHttpInfo(body: OrderAddDocumentRequest, _options?: Configuration): Observable<HttpInfo<any>> {
-        const requestContextPromise = this.requestFactory.orderAddDocument(body, _options);
-
-        // build promise chain
-        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
-        for (let middleware of this.configuration.middleware) {
-            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
-        }
-
-        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
-            pipe(mergeMap((response: ResponseContext) => {
-                let middlewarePostObservable = of(response);
-                for (let middleware of this.configuration.middleware) {
-                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
-                }
-                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.orderAddDocumentWithHttpInfo(rsp)));
-            }));
-    }
-
-    /**
-     * Documents
-     * @param body 
-     */
-    public orderAddDocument(body: OrderAddDocumentRequest, _options?: Configuration): Observable<any> {
-        return this.orderAddDocumentWithHttpInfo(body, _options).pipe(map((apiResponse: HttpInfo<any>) => apiResponse.data));
-    }
-
-    /**
-     * @param body 
-     */
-    public orderRemoveDocumentByCodeWithHttpInfo(body: OrderRemoveDocumentByCodeRequest, _options?: Configuration): Observable<HttpInfo<any>> {
-        const requestContextPromise = this.requestFactory.orderRemoveDocumentByCode(body, _options);
-
-        // build promise chain
-        let middlewarePreObservable = from<RequestContext>(requestContextPromise);
-        for (let middleware of this.configuration.middleware) {
-            middlewarePreObservable = middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => middleware.pre(ctx)));
-        }
-
-        return middlewarePreObservable.pipe(mergeMap((ctx: RequestContext) => this.configuration.httpApi.send(ctx))).
-            pipe(mergeMap((response: ResponseContext) => {
-                let middlewarePostObservable = of(response);
-                for (let middleware of this.configuration.middleware) {
-                    middlewarePostObservable = middlewarePostObservable.pipe(mergeMap((rsp: ResponseContext) => middleware.post(rsp)));
-                }
-                return middlewarePostObservable.pipe(map((rsp: ResponseContext) => this.responseProcessor.orderRemoveDocumentByCodeWithHttpInfo(rsp)));
-            }));
-    }
-
-    /**
-     * @param body 
-     */
-    public orderRemoveDocumentByCode(body: OrderRemoveDocumentByCodeRequest, _options?: Configuration): Observable<any> {
-        return this.orderRemoveDocumentByCodeWithHttpInfo(body, _options).pipe(map((apiResponse: HttpInfo<any>) => apiResponse.data));
     }
 
     /**
