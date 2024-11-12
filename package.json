@@ -1,6 +1,6 @@
 {
   "name": "@gemini-commerce/typescript-client-order",
-  "version": "1.1.6",
+  "version": "2.0",
   "description": "OpenAPI client for @gemini-commerce/typescript-client-order",
   "author": "OpenAPI-Generator Contributors",
   "repository": {

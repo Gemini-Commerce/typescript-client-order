@@ -26,6 +26,83 @@ import { BASE_PATH, COLLECTION_FORMATS, BaseAPI, RequiredError, operationServerM
 /**
  * 
  * @export
+ * @interface BehaviorOptionsInventory
+ */
+export interface BehaviorOptionsInventory {
+    /**
+     * 
+     * @type {BehaviorOptionsInventoryAction}
+     * @memberof BehaviorOptionsInventory
+     */
+    'action'?: BehaviorOptionsInventoryAction;
+}
+
+
+/**
+ * 
+ * @export
+ * @enum {string}
+ */
+
+export const BehaviorOptionsInventoryAction = {
+    Unknown: 'UNKNOWN',
+    DoNotHandle: 'DO_NOT_HANDLE'
+} as const;
+
+export type BehaviorOptionsInventoryAction = typeof BehaviorOptionsInventoryAction[keyof typeof BehaviorOptionsInventoryAction];
+
+
+/**
+ * 
+ * @export
+ * @enum {string}
+ */
+
+export const BehaviorOptionsPaymentAction = {
+    Unknown: 'UNKNOWN',
+    DoNotHandle: 'DO_NOT_HANDLE'
+} as const;
+
+export type BehaviorOptionsPaymentAction = typeof BehaviorOptionsPaymentAction[keyof typeof BehaviorOptionsPaymentAction];
+
+
+/**
+ * 
+ * @export
+ * @interface CancelOrderRequestBehaviorOptions
+ */
+export interface CancelOrderRequestBehaviorOptions {
+    /**
+     * 
+     * @type {BehaviorOptionsInventory}
+     * @memberof CancelOrderRequestBehaviorOptions
+     */
+    'inventory'?: BehaviorOptionsInventory;
+    /**
+     * 
+     * @type {CancelOrderRequestBehaviorOptionsPayment}
+     * @memberof CancelOrderRequestBehaviorOptions
+     */
+    'payment'?: CancelOrderRequestBehaviorOptionsPayment;
+}
+/**
+ * 
+ * @export
+ * @interface CancelOrderRequestBehaviorOptionsPayment
+ */
+export interface CancelOrderRequestBehaviorOptionsPayment {
+    /**
+     * 
+     * @type {BehaviorOptionsPaymentAction}
+     * @memberof CancelOrderRequestBehaviorOptionsPayment
+     */
+    'action'?: BehaviorOptionsPaymentAction;
+}
+
+
+/**
+ * 
+ * @export
  * @interface CreateOrderRequestInitialPayment
  */
 export interface CreateOrderRequestInitialPayment {
@@ -363,6 +440,12 @@ export interface OrderCancelOrderRequest {
      * @memberof OrderCancelOrderRequest
      */
     'reason'?: string;
+    /**
+     * 
+     * @type {CancelOrderRequestBehaviorOptions}
+     * @memberof OrderCancelOrderRequest
+     */
+    'options'?: CancelOrderRequestBehaviorOptions;
 }
 /**
  * 
@@ -2322,6 +2405,12 @@ export interface OrderOrderDataItem {
      * @type {number}
      * @memberof OrderOrderDataItem
      */
+    'freeQty'?: number;
+    /**
+     * 
+     * @type {number}
+     * @memberof OrderOrderDataItem
+     */
     'qtyCommitted'?: number;
     /**
      * 
@@ -3430,7 +3519,8 @@ export const OrderTransactionType = {
     Void: 'VOID',
     Failed: 'FAILED',
     Pending: 'PENDING',
-    Fraud: 'FRAUD'
+    Fraud: 'FRAUD',
+    Noop: 'NOOP'
 } as const;
 
 export type OrderTransactionType = typeof OrderTransactionType[keyof typeof OrderTransactionType];
