@@ -5859,9 +5859,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async approveOrder(body: OrderApproveOrderRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.approveOrder(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.approveOrder']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.approveOrder']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -5872,9 +5872,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async assignShipment(body: OrderAssignShipmentRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.assignShipment(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.assignShipment']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.assignShipment']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -5885,9 +5885,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async calculateRefund(body: OrderCalculateRefundRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderCalculateRefundResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.calculateRefund(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.calculateRefund']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.calculateRefund']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -5898,9 +5898,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async cancelFulfillment(body: OrderCancelFulfillmentRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.cancelFulfillment(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.cancelFulfillment']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.cancelFulfillment']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -5911,9 +5911,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async cancelOrder(body: OrderCancelOrderRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.cancelOrder(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.cancelOrder']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.cancelOrder']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -5924,9 +5924,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async cancelShipment(body: OrderCancelShipmentRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.cancelShipment(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.cancelShipment']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.cancelShipment']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -5937,9 +5937,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async completeShipmentPacking(body: OrderCompleteShipmentPackingRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.completeShipmentPacking(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.completeShipmentPacking']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.completeShipmentPacking']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -5950,9 +5950,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async createFulfillment(body: OrderCreateFulfillmentRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderFulfillment>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.createFulfillment(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.createFulfillment']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.createFulfillment']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -5963,9 +5963,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async createOrder(body: OrderCreateOrderRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderOrderData>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.createOrder(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.createOrder']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.createOrder']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -5976,9 +5976,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async createOrderHistory(body: OrderCreateHistoryRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderDataHistory>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.createOrderHistory(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.createOrderHistory']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.createOrderHistory']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -5989,9 +5989,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async createPayment(body: OrderCreatePaymentRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderPayment>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.createPayment(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.createPayment']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.createPayment']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -6002,9 +6002,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async createPaymentTransaction(body: OrderCreatePaymentTransactionRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderTransaction>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.createPaymentTransaction(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.createPaymentTransaction']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.createPaymentTransaction']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -6015,9 +6015,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async createRefund(body: OrderCreateRefundRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderRefund>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.createRefund(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.createRefund']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.createRefund']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -6028,9 +6028,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async createRefundTransaction(body: OrderCreateRefundTransactionRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderTransaction>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.createRefundTransaction(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.createRefundTransaction']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.createRefundTransaction']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -6041,9 +6041,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async createShipment(body: OrderCreateShipmentRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderShipment>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.createShipment(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.createShipment']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.createShipment']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -6054,9 +6054,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async deleteOrder(body: OrderDeleteOrderRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.deleteOrder(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.deleteOrder']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.deleteOrder']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -6067,9 +6067,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async getFulfillment(body: OrderGetFulfillmentRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderFulfillment>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getFulfillment(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.getFulfillment']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.getFulfillment']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -6080,9 +6080,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async getOrder(body: OrderGetOrderRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderOrderData>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getOrder(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.getOrder']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.getOrder']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -6093,9 +6093,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async getOrderByCartId(body: OrderGetOrderByCartIdRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderOrderData>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getOrderByCartId(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.getOrderByCartId']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.getOrderByCartId']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -6106,9 +6106,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async getOrderByOrderNumber(body: OrderGetOrderByOrderNumberRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderOrderData>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getOrderByOrderNumber(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.getOrderByOrderNumber']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.getOrderByOrderNumber']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -6119,9 +6119,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async getPayment(body: OrderGetPaymentRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderPayment>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getPayment(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.getPayment']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.getPayment']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -6132,9 +6132,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async getShipment(body: OrderGetShipmentRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderShipment>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getShipment(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.getShipment']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.getShipment']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -6145,9 +6145,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async getTransaction(body: OrderGetTransactionRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderTransaction>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.getTransaction(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.getTransaction']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.getTransaction']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -6158,9 +6158,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async holdOrder(body: OrderHoldOrderRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.holdOrder(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.holdOrder']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.holdOrder']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -6171,9 +6171,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async importOrder(body: OrderImportOrderRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderOrderData>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.importOrder(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.importOrder']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.importOrder']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -6184,9 +6184,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async listFulfillments(body: OrderListFulfillmentsRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderListFulfillmentsResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.listFulfillments(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.listFulfillments']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.listFulfillments']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -6197,9 +6197,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async listOrders(body: OrderListOrdersRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderListOrdersResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.listOrders(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.listOrders']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.listOrders']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -6210,9 +6210,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async listOrdersByCustomer(body: OrderListOrdersByCustomerRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderListOrdersByCustomerResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.listOrdersByCustomer(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.listOrdersByCustomer']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.listOrdersByCustomer']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -6223,9 +6223,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async listOrdersByNumbers(body: OrderListOrdersByNumbersRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderListOrdersByNumbersResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.listOrdersByNumbers(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.listOrdersByNumbers']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.listOrdersByNumbers']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -6236,9 +6236,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async listShipments(body: OrderListShipmentsRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderListShipmentsResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.listShipments(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.listShipments']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.listShipments']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -6249,9 +6249,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async orderAddDocument(body: OrderAddDocumentRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.orderAddDocument(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.orderAddDocument']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.orderAddDocument']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -6261,9 +6261,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async orderRemoveDocumentByCode(body: OrderRemoveDocumentByCodeRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.orderRemoveDocumentByCode(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.orderRemoveDocumentByCode']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.orderRemoveDocumentByCode']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -6274,9 +6274,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async printOrdersLabels(body: OrderPrintOrdersLabelsRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderPrintOrdersLabelsResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.printOrdersLabels(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.printOrdersLabels']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.printOrdersLabels']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -6287,9 +6287,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async quashFulfillment(body: OrderQuashFulfillmentRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.quashFulfillment(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.quashFulfillment']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.quashFulfillment']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -6300,9 +6300,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async quashShipment(body: OrderQuashShipmentRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.quashShipment(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.quashShipment']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.quashShipment']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -6313,9 +6313,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async receiveFulfillment(body: OrderReceiveFulfillmentRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.receiveFulfillment(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.receiveFulfillment']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.receiveFulfillment']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -6326,9 +6326,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async reportFulfillmentError(body: OrderReportFulfillmentErrorRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.reportFulfillmentError(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.reportFulfillmentError']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.reportFulfillmentError']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -6339,9 +6339,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async reportFulfillmentNotResolvable(body: OrderReportFulfillmentNotResolvableRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.reportFulfillmentNotResolvable(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.reportFulfillmentNotResolvable']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.reportFulfillmentNotResolvable']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -6352,9 +6352,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async reportFulfillmentReady(body: OrderReportFulfillmentReadyRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.reportFulfillmentReady(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.reportFulfillmentReady']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.reportFulfillmentReady']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -6365,9 +6365,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async reportShipmentDelivery(body: OrderReportShipmentDeliveryRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.reportShipmentDelivery(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.reportShipmentDelivery']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.reportShipmentDelivery']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -6378,9 +6378,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async reportShipmentMissingStock(body: OrderReportShipmentMissingStockRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.reportShipmentMissingStock(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.reportShipmentMissingStock']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.reportShipmentMissingStock']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -6391,9 +6391,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async resolveShipmentMissingStock(body: OrderResolveShipmentMissingStockRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.resolveShipmentMissingStock(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.resolveShipmentMissingStock']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.resolveShipmentMissingStock']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -6404,9 +6404,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async retryFulfillment(body: OrderRetryFulfillmentRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.retryFulfillment(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.retryFulfillment']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.retryFulfillment']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -6417,9 +6417,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async searchOrders(body: OrderSearchOrdersRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderSearchOrdersResponse>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.searchOrders(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.searchOrders']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.searchOrders']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -6430,9 +6430,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async sendFulfillment(body: OrderSendFulfillmentRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.sendFulfillment(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.sendFulfillment']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.sendFulfillment']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -6443,9 +6443,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async sendOrderNotification(body: OrderSendOrderNotificationRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.sendOrderNotification(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.sendOrderNotification']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.sendOrderNotification']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -6456,9 +6456,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async startFulfillmentProcessing(body: OrderStartFulfillmentProcessingRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.startFulfillmentProcessing(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.startFulfillmentProcessing']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.startFulfillmentProcessing']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -6469,9 +6469,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async startShipmentProcessing(body: OrderStartShipmentProcessingRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.startShipmentProcessing(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.startShipmentProcessing']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.startShipmentProcessing']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -6482,9 +6482,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async unholdOrder(body: OrderUnholdOrderRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<object>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.unholdOrder(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.unholdOrder']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.unholdOrder']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -6495,9 +6495,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async updateOrder(body: OrderUpdateOrderRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderOrderData>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.updateOrder(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.updateOrder']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.updateOrder']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
         /**
          * 
@@ -6508,9 +6508,9 @@ export const OrderApiFp = function(configuration?: Configuration) {
          */
         async updatePayment(body: OrderUpdatePaymentRequest, options?: RawAxiosRequestConfig): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<OrderPayment>> {
             const localVarAxiosArgs = await localVarAxiosParamCreator.updatePayment(body, options);
-            const index = configuration?.serverIndex ?? 0;
-            const operationBasePath = operationServerMap['OrderApi.updatePayment']?.[index]?.url;
-            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, operationBasePath || basePath);
+            const localVarOperationServerIndex = configuration?.serverIndex ?? 0;
+            const localVarOperationServerBasePath = operationServerMap['OrderApi.updatePayment']?.[localVarOperationServerIndex]?.url;
+            return (axios, basePath) => createRequestFunction(localVarAxiosArgs, globalAxios, BASE_PATH, configuration)(axios, localVarOperationServerBasePath || basePath);
         },
     }
 };
@@ -6529,7 +6529,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        approveOrder(body: OrderApproveOrderRequest, options?: any): AxiosPromise<object> {
+        approveOrder(body: OrderApproveOrderRequest, options?: RawAxiosRequestConfig): AxiosPromise<object> {
             return localVarFp.approveOrder(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6539,7 +6539,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        assignShipment(body: OrderAssignShipmentRequest, options?: any): AxiosPromise<object> {
+        assignShipment(body: OrderAssignShipmentRequest, options?: RawAxiosRequestConfig): AxiosPromise<object> {
             return localVarFp.assignShipment(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6549,7 +6549,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        calculateRefund(body: OrderCalculateRefundRequest, options?: any): AxiosPromise<OrderCalculateRefundResponse> {
+        calculateRefund(body: OrderCalculateRefundRequest, options?: RawAxiosRequestConfig): AxiosPromise<OrderCalculateRefundResponse> {
             return localVarFp.calculateRefund(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6559,7 +6559,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        cancelFulfillment(body: OrderCancelFulfillmentRequest, options?: any): AxiosPromise<object> {
+        cancelFulfillment(body: OrderCancelFulfillmentRequest, options?: RawAxiosRequestConfig): AxiosPromise<object> {
             return localVarFp.cancelFulfillment(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6569,7 +6569,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        cancelOrder(body: OrderCancelOrderRequest, options?: any): AxiosPromise<object> {
+        cancelOrder(body: OrderCancelOrderRequest, options?: RawAxiosRequestConfig): AxiosPromise<object> {
             return localVarFp.cancelOrder(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6579,7 +6579,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        cancelShipment(body: OrderCancelShipmentRequest, options?: any): AxiosPromise<object> {
+        cancelShipment(body: OrderCancelShipmentRequest, options?: RawAxiosRequestConfig): AxiosPromise<object> {
             return localVarFp.cancelShipment(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6589,7 +6589,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        completeShipmentPacking(body: OrderCompleteShipmentPackingRequest, options?: any): AxiosPromise<object> {
+        completeShipmentPacking(body: OrderCompleteShipmentPackingRequest, options?: RawAxiosRequestConfig): AxiosPromise<object> {
             return localVarFp.completeShipmentPacking(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6599,7 +6599,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createFulfillment(body: OrderCreateFulfillmentRequest, options?: any): AxiosPromise<OrderFulfillment> {
+        createFulfillment(body: OrderCreateFulfillmentRequest, options?: RawAxiosRequestConfig): AxiosPromise<OrderFulfillment> {
             return localVarFp.createFulfillment(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6609,7 +6609,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createOrder(body: OrderCreateOrderRequest, options?: any): AxiosPromise<OrderOrderData> {
+        createOrder(body: OrderCreateOrderRequest, options?: RawAxiosRequestConfig): AxiosPromise<OrderOrderData> {
             return localVarFp.createOrder(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6619,7 +6619,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createOrderHistory(body: OrderCreateHistoryRequest, options?: any): AxiosPromise<OrderDataHistory> {
+        createOrderHistory(body: OrderCreateHistoryRequest, options?: RawAxiosRequestConfig): AxiosPromise<OrderDataHistory> {
             return localVarFp.createOrderHistory(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6629,7 +6629,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createPayment(body: OrderCreatePaymentRequest, options?: any): AxiosPromise<OrderPayment> {
+        createPayment(body: OrderCreatePaymentRequest, options?: RawAxiosRequestConfig): AxiosPromise<OrderPayment> {
             return localVarFp.createPayment(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6639,7 +6639,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createPaymentTransaction(body: OrderCreatePaymentTransactionRequest, options?: any): AxiosPromise<OrderTransaction> {
+        createPaymentTransaction(body: OrderCreatePaymentTransactionRequest, options?: RawAxiosRequestConfig): AxiosPromise<OrderTransaction> {
             return localVarFp.createPaymentTransaction(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6649,7 +6649,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createRefund(body: OrderCreateRefundRequest, options?: any): AxiosPromise<OrderRefund> {
+        createRefund(body: OrderCreateRefundRequest, options?: RawAxiosRequestConfig): AxiosPromise<OrderRefund> {
             return localVarFp.createRefund(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6659,7 +6659,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createRefundTransaction(body: OrderCreateRefundTransactionRequest, options?: any): AxiosPromise<OrderTransaction> {
+        createRefundTransaction(body: OrderCreateRefundTransactionRequest, options?: RawAxiosRequestConfig): AxiosPromise<OrderTransaction> {
             return localVarFp.createRefundTransaction(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6669,7 +6669,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        createShipment(body: OrderCreateShipmentRequest, options?: any): AxiosPromise<OrderShipment> {
+        createShipment(body: OrderCreateShipmentRequest, options?: RawAxiosRequestConfig): AxiosPromise<OrderShipment> {
             return localVarFp.createShipment(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6679,7 +6679,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        deleteOrder(body: OrderDeleteOrderRequest, options?: any): AxiosPromise<object> {
+        deleteOrder(body: OrderDeleteOrderRequest, options?: RawAxiosRequestConfig): AxiosPromise<object> {
             return localVarFp.deleteOrder(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6689,7 +6689,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getFulfillment(body: OrderGetFulfillmentRequest, options?: any): AxiosPromise<OrderFulfillment> {
+        getFulfillment(body: OrderGetFulfillmentRequest, options?: RawAxiosRequestConfig): AxiosPromise<OrderFulfillment> {
             return localVarFp.getFulfillment(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6699,7 +6699,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getOrder(body: OrderGetOrderRequest, options?: any): AxiosPromise<OrderOrderData> {
+        getOrder(body: OrderGetOrderRequest, options?: RawAxiosRequestConfig): AxiosPromise<OrderOrderData> {
             return localVarFp.getOrder(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6709,7 +6709,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getOrderByCartId(body: OrderGetOrderByCartIdRequest, options?: any): AxiosPromise<OrderOrderData> {
+        getOrderByCartId(body: OrderGetOrderByCartIdRequest, options?: RawAxiosRequestConfig): AxiosPromise<OrderOrderData> {
             return localVarFp.getOrderByCartId(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6719,7 +6719,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getOrderByOrderNumber(body: OrderGetOrderByOrderNumberRequest, options?: any): AxiosPromise<OrderOrderData> {
+        getOrderByOrderNumber(body: OrderGetOrderByOrderNumberRequest, options?: RawAxiosRequestConfig): AxiosPromise<OrderOrderData> {
             return localVarFp.getOrderByOrderNumber(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6729,7 +6729,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getPayment(body: OrderGetPaymentRequest, options?: any): AxiosPromise<OrderPayment> {
+        getPayment(body: OrderGetPaymentRequest, options?: RawAxiosRequestConfig): AxiosPromise<OrderPayment> {
             return localVarFp.getPayment(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6739,7 +6739,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getShipment(body: OrderGetShipmentRequest, options?: any): AxiosPromise<OrderShipment> {
+        getShipment(body: OrderGetShipmentRequest, options?: RawAxiosRequestConfig): AxiosPromise<OrderShipment> {
             return localVarFp.getShipment(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6749,7 +6749,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        getTransaction(body: OrderGetTransactionRequest, options?: any): AxiosPromise<OrderTransaction> {
+        getTransaction(body: OrderGetTransactionRequest, options?: RawAxiosRequestConfig): AxiosPromise<OrderTransaction> {
             return localVarFp.getTransaction(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6759,7 +6759,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        holdOrder(body: OrderHoldOrderRequest, options?: any): AxiosPromise<object> {
+        holdOrder(body: OrderHoldOrderRequest, options?: RawAxiosRequestConfig): AxiosPromise<object> {
             return localVarFp.holdOrder(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6769,7 +6769,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        importOrder(body: OrderImportOrderRequest, options?: any): AxiosPromise<OrderOrderData> {
+        importOrder(body: OrderImportOrderRequest, options?: RawAxiosRequestConfig): AxiosPromise<OrderOrderData> {
             return localVarFp.importOrder(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6779,7 +6779,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listFulfillments(body: OrderListFulfillmentsRequest, options?: any): AxiosPromise<OrderListFulfillmentsResponse> {
+        listFulfillments(body: OrderListFulfillmentsRequest, options?: RawAxiosRequestConfig): AxiosPromise<OrderListFulfillmentsResponse> {
             return localVarFp.listFulfillments(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6789,7 +6789,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listOrders(body: OrderListOrdersRequest, options?: any): AxiosPromise<OrderListOrdersResponse> {
+        listOrders(body: OrderListOrdersRequest, options?: RawAxiosRequestConfig): AxiosPromise<OrderListOrdersResponse> {
             return localVarFp.listOrders(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6799,7 +6799,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listOrdersByCustomer(body: OrderListOrdersByCustomerRequest, options?: any): AxiosPromise<OrderListOrdersByCustomerResponse> {
+        listOrdersByCustomer(body: OrderListOrdersByCustomerRequest, options?: RawAxiosRequestConfig): AxiosPromise<OrderListOrdersByCustomerResponse> {
             return localVarFp.listOrdersByCustomer(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6809,7 +6809,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listOrdersByNumbers(body: OrderListOrdersByNumbersRequest, options?: any): AxiosPromise<OrderListOrdersByNumbersResponse> {
+        listOrdersByNumbers(body: OrderListOrdersByNumbersRequest, options?: RawAxiosRequestConfig): AxiosPromise<OrderListOrdersByNumbersResponse> {
             return localVarFp.listOrdersByNumbers(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6819,7 +6819,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        listShipments(body: OrderListShipmentsRequest, options?: any): AxiosPromise<OrderListShipmentsResponse> {
+        listShipments(body: OrderListShipmentsRequest, options?: RawAxiosRequestConfig): AxiosPromise<OrderListShipmentsResponse> {
             return localVarFp.listShipments(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6829,7 +6829,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        orderAddDocument(body: OrderAddDocumentRequest, options?: any): AxiosPromise<object> {
+        orderAddDocument(body: OrderAddDocumentRequest, options?: RawAxiosRequestConfig): AxiosPromise<object> {
             return localVarFp.orderAddDocument(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6838,7 +6838,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        orderRemoveDocumentByCode(body: OrderRemoveDocumentByCodeRequest, options?: any): AxiosPromise<object> {
+        orderRemoveDocumentByCode(body: OrderRemoveDocumentByCodeRequest, options?: RawAxiosRequestConfig): AxiosPromise<object> {
             return localVarFp.orderRemoveDocumentByCode(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6848,7 +6848,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        printOrdersLabels(body: OrderPrintOrdersLabelsRequest, options?: any): AxiosPromise<OrderPrintOrdersLabelsResponse> {
+        printOrdersLabels(body: OrderPrintOrdersLabelsRequest, options?: RawAxiosRequestConfig): AxiosPromise<OrderPrintOrdersLabelsResponse> {
             return localVarFp.printOrdersLabels(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6858,7 +6858,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        quashFulfillment(body: OrderQuashFulfillmentRequest, options?: any): AxiosPromise<object> {
+        quashFulfillment(body: OrderQuashFulfillmentRequest, options?: RawAxiosRequestConfig): AxiosPromise<object> {
             return localVarFp.quashFulfillment(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6868,7 +6868,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        quashShipment(body: OrderQuashShipmentRequest, options?: any): AxiosPromise<object> {
+        quashShipment(body: OrderQuashShipmentRequest, options?: RawAxiosRequestConfig): AxiosPromise<object> {
             return localVarFp.quashShipment(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6878,7 +6878,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        receiveFulfillment(body: OrderReceiveFulfillmentRequest, options?: any): AxiosPromise<object> {
+        receiveFulfillment(body: OrderReceiveFulfillmentRequest, options?: RawAxiosRequestConfig): AxiosPromise<object> {
             return localVarFp.receiveFulfillment(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6888,7 +6888,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        reportFulfillmentError(body: OrderReportFulfillmentErrorRequest, options?: any): AxiosPromise<object> {
+        reportFulfillmentError(body: OrderReportFulfillmentErrorRequest, options?: RawAxiosRequestConfig): AxiosPromise<object> {
             return localVarFp.reportFulfillmentError(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6898,7 +6898,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        reportFulfillmentNotResolvable(body: OrderReportFulfillmentNotResolvableRequest, options?: any): AxiosPromise<object> {
+        reportFulfillmentNotResolvable(body: OrderReportFulfillmentNotResolvableRequest, options?: RawAxiosRequestConfig): AxiosPromise<object> {
             return localVarFp.reportFulfillmentNotResolvable(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6908,7 +6908,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        reportFulfillmentReady(body: OrderReportFulfillmentReadyRequest, options?: any): AxiosPromise<object> {
+        reportFulfillmentReady(body: OrderReportFulfillmentReadyRequest, options?: RawAxiosRequestConfig): AxiosPromise<object> {
             return localVarFp.reportFulfillmentReady(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6918,7 +6918,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        reportShipmentDelivery(body: OrderReportShipmentDeliveryRequest, options?: any): AxiosPromise<object> {
+        reportShipmentDelivery(body: OrderReportShipmentDeliveryRequest, options?: RawAxiosRequestConfig): AxiosPromise<object> {
             return localVarFp.reportShipmentDelivery(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6928,7 +6928,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        reportShipmentMissingStock(body: OrderReportShipmentMissingStockRequest, options?: any): AxiosPromise<object> {
+        reportShipmentMissingStock(body: OrderReportShipmentMissingStockRequest, options?: RawAxiosRequestConfig): AxiosPromise<object> {
             return localVarFp.reportShipmentMissingStock(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6938,7 +6938,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        resolveShipmentMissingStock(body: OrderResolveShipmentMissingStockRequest, options?: any): AxiosPromise<object> {
+        resolveShipmentMissingStock(body: OrderResolveShipmentMissingStockRequest, options?: RawAxiosRequestConfig): AxiosPromise<object> {
             return localVarFp.resolveShipmentMissingStock(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6948,7 +6948,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        retryFulfillment(body: OrderRetryFulfillmentRequest, options?: any): AxiosPromise<object> {
+        retryFulfillment(body: OrderRetryFulfillmentRequest, options?: RawAxiosRequestConfig): AxiosPromise<object> {
             return localVarFp.retryFulfillment(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6958,7 +6958,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        searchOrders(body: OrderSearchOrdersRequest, options?: any): AxiosPromise<OrderSearchOrdersResponse> {
+        searchOrders(body: OrderSearchOrdersRequest, options?: RawAxiosRequestConfig): AxiosPromise<OrderSearchOrdersResponse> {
             return localVarFp.searchOrders(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6968,7 +6968,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        sendFulfillment(body: OrderSendFulfillmentRequest, options?: any): AxiosPromise<object> {
+        sendFulfillment(body: OrderSendFulfillmentRequest, options?: RawAxiosRequestConfig): AxiosPromise<object> {
             return localVarFp.sendFulfillment(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6978,7 +6978,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        sendOrderNotification(body: OrderSendOrderNotificationRequest, options?: any): AxiosPromise<object> {
+        sendOrderNotification(body: OrderSendOrderNotificationRequest, options?: RawAxiosRequestConfig): AxiosPromise<object> {
             return localVarFp.sendOrderNotification(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6988,7 +6988,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        startFulfillmentProcessing(body: OrderStartFulfillmentProcessingRequest, options?: any): AxiosPromise<object> {
+        startFulfillmentProcessing(body: OrderStartFulfillmentProcessingRequest, options?: RawAxiosRequestConfig): AxiosPromise<object> {
             return localVarFp.startFulfillmentProcessing(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -6998,7 +6998,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        startShipmentProcessing(body: OrderStartShipmentProcessingRequest, options?: any): AxiosPromise<object> {
+        startShipmentProcessing(body: OrderStartShipmentProcessingRequest, options?: RawAxiosRequestConfig): AxiosPromise<object> {
             return localVarFp.startShipmentProcessing(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -7008,7 +7008,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        unholdOrder(body: OrderUnholdOrderRequest, options?: any): AxiosPromise<object> {
+        unholdOrder(body: OrderUnholdOrderRequest, options?: RawAxiosRequestConfig): AxiosPromise<object> {
             return localVarFp.unholdOrder(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -7018,7 +7018,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        updateOrder(body: OrderUpdateOrderRequest, options?: any): AxiosPromise<OrderOrderData> {
+        updateOrder(body: OrderUpdateOrderRequest, options?: RawAxiosRequestConfig): AxiosPromise<OrderOrderData> {
             return localVarFp.updateOrder(body, options).then((request) => request(axios, basePath));
         },
         /**
@@ -7028,7 +7028,7 @@ export const OrderApiFactory = function (configuration?: Configuration, basePath
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        updatePayment(body: OrderUpdatePaymentRequest, options?: any): AxiosPromise<OrderPayment> {
+        updatePayment(body: OrderUpdatePaymentRequest, options?: RawAxiosRequestConfig): AxiosPromise<OrderPayment> {
             return localVarFp.updatePayment(body, options).then((request) => request(axios, basePath));
         },
     };
